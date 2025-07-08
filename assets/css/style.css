@@ -569,6 +569,12 @@ input[type="color"] {
   transform: translateY(-2px);
   color: var(--tp-common-white);
 }
+.tp-btn span,
+.tp-btn-white span,
+.tp-btn-orange span,
+.tp-btn-green-sm span {
+  white-space: nowrap;
+}
 
 .tp-btn-blue-lg {
   display: inline-block;
@@ -4186,6 +4192,8 @@ input[type="color"] {
 .header-bottom__main-menu-3 nav ul {
   margin-left: -20px;
 }
+
+
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
   .header-bottom__main-menu-3 nav ul {
     margin-left: 0px;
