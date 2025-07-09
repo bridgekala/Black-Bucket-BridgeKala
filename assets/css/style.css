@@ -16127,7 +16127,7 @@ input[type="color"] {
   border: 1px solid #e5e5e5;
   border-radius: 12px;
   text-align: center;
-  padding: 55px 30px;
+  padding: 55px 30px 10px;
   overflow: hidden;
 }
 .contact-info-img {
