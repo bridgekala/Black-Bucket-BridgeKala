@@ -4193,7 +4193,6 @@ input[type="color"] {
   margin-left: -20px;
 }
 
-
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
   .header-bottom__main-menu-3 nav ul {
     margin-left: 0px;
@@ -17558,3 +17557,8 @@ input[type="color"] {
 }
 
 /*# sourceMappingURL=style.css.map */
+
+#mobile-menu ul li a.active {
+  color: #6DC739;
+  text-decoration: underline;
+}
