@@ -17559,6 +17559,6 @@ input[type="color"] {
 /*# sourceMappingURL=style.css.map */
 
 #mobile-menu ul li a.active {
-  color: #6DC739;
-  text-decoration: underline;
+  color: #6dc739;
+  /* text-decoration: underline; */
 }
