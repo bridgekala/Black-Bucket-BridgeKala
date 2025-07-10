@@ -4873,15 +4873,16 @@ input[type="color"] {
 .tp-hero-2__plr {
   padding-left: 310px;
   padding-right: 310px;
+  height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 @media only screen and (min-width: 1600px) and (max-width: 1800px) {
   .tp-hero-2__plr {
     padding-left: 250px;
     padding-right: 250px;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    
   }
 }
 @media only screen and (min-width: 1400px) and (max-width: 1599px) {
