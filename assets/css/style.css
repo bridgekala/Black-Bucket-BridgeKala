@@ -17563,3 +17563,38 @@ input[type="color"] {
   /* text-decoration: underline; */
 }
 
+.video-background {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.video-background video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  object-fit: cover;
+}
+
+/* Ensures content is layered above video */
+.video-background .content {
+  position: relative;
+  z-index: 1;
+}
+
+/* Optional: Add overlay for better contrast */
+.video-background::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5); /* dark overlay */
+  z-index: 0;
+}
