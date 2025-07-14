@@ -13454,6 +13454,7 @@ input[type="color"] {
   border-radius: 20px;
   padding: 60px 40px;
   transition: 0.4s;
+  height: 500px;
 }
 .tp-testimonial-2-item:hover {
   box-shadow: 0px 20px 20px rgba(28, 9, 61, 0.2);
