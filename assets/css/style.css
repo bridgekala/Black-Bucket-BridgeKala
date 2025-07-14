@@ -13838,6 +13838,7 @@ input[type="color"] {
   background-color: var(--tp-common-white);
   border-radius: 16px;
   overflow: hidden;
+  height: 400px;
 }
 .tp-testimonial-five-wrapper {
   padding: 30px 70px 30px 60px;
