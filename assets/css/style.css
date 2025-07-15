@@ -3400,6 +3400,8 @@ input[type="color"] {
 @media (max-width: 767px) {
   .tp-section-title-lg {
     font-size: 32px;
+    text-align: center;
+
   }
   .tp-section-title-lg br {
     display: none;
@@ -8233,6 +8235,7 @@ input[type="color"] {
 @media (max-width: 767px) {
   .tp-service-2__section-box p {
     font-size: 17px;
+    text-align: center;
   }
 }
 .tp-service-2__shape {
