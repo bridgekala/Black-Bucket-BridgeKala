@@ -45,12 +45,12 @@
   /**
   @font family declaration
   */
-  --tp-ff-body: "Plus Jakarta Sans", sans-serif;
-  --tp-ff-heading: "Plus Jakarta Sans", sans-serif;
+  --tp-ff-body: "Work Sans", sans-serif;
+  --tp-ff-heading: "Cormorant Garamond", serif;
   --tp-ff-fontawesome: Font Awesome 5 Pro;
-  --tp-ff-mont: "Montserrat Alternates", sans-serif;
-  --tp-ff-urban: "Urbanist", sans-serif;
-  --tp-ff-dm: "DM Serif Display", serif;
+  --tp-ff-mont:  "Cormorant Garamond", serif;
+  --tp-ff-urban:  "Cormorant Garamond", serif;
+  --tp-ff-dm:  "Cormorant Garamond", serif;
   /**
   @color declaration
   */
@@ -3401,7 +3401,6 @@ input[type="color"] {
   .tp-section-title-lg {
     font-size: 32px;
     text-align: center;
-
   }
   .tp-section-title-lg br {
     display: none;
@@ -4437,7 +4436,6 @@ input[type="color"] {
   .tp-header-2__plr {
     padding-left: 250px;
     padding-right: 250px;
-    
   }
 }
 @media only screen and (min-width: 1400px) and (max-width: 1599px) {
@@ -4876,15 +4874,14 @@ input[type="color"] {
   padding-left: 310px;
   padding-right: 310px;
   height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 @media only screen and (min-width: 1600px) and (max-width: 1800px) {
   .tp-hero-2__plr {
     padding-left: 250px;
     padding-right: 250px;
-    
   }
 }
 @media only screen and (min-width: 1400px) and (max-width: 1599px) {
