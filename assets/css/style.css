@@ -49,8 +49,10 @@
   --tp-ff-heading: "Cormorant Garamond", serif;
   --tp-ff-fontawesome: Font Awesome 5 Pro;
   --tp-ff-mont: "Cormorant Garamond", serif;
-  --tp-ff-urban: "Cormorant Garamond", serif;
-  --tp-ff-dm: "Cormorant Garamond", serif;
+  --tp-ff-urban: "Work Sans",
+    sans-serif;
+  --tp-ff-dm: "Work Sans",
+    sans-serif;
   /**
   @color declaration
   */
@@ -10229,7 +10231,7 @@ input[type="color"] {
   font-size: 18px;
   line-height: 26px;
   color: rgba(255, 255, 255, 0.8);
-  font-family: var(--tp-ff-mont);
+  font-family: var(--tp-ff-urban);
   padding-bottom: 20px;
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
@@ -10357,7 +10359,7 @@ input[type="color"] {
   font-weight: 400;
   font-size: 18px;
   line-height: 28px;
-  font-family: var(--tp-ff-urban);
+  font-family: var(--tp-ff-body);
   padding-bottom: 17px;
 }
 @media only screen and (min-width: 1200px) and (max-width: 1399px),
@@ -10400,7 +10402,7 @@ input[type="color"] {
   font-weight: 400;
   font-size: 18px;
   line-height: 28px;
-  font-family: var(--tp-ff-urban);
+  font-family: var(--tp-ff-body);
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
   .tp-sales-section-box p br {
