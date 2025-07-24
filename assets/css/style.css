@@ -8281,7 +8281,7 @@ input[type="color"] {
   font-size: 40px;
   line-height: 24px;
   color: var(--tp-common-black);
-  font-family: var(--tp-ff-mont);
+  font-family: var(--tp-ff-body);
   padding-bottom: 16px;
   display: inline-block;
 }
