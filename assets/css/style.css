@@ -193,7 +193,7 @@ ul {
 p {
   color: var(--tp-text-body);
   font-weight: 400;
-  font-size: 16px;
+  font-size: 20px;
   line-height: 24px;
 }
 
@@ -6287,7 +6287,7 @@ input[type="color"] {
 }
 .tp-payment__title {
   font-weight: 600;
-  font-size: 30px;
+  font-size: 40px;
   line-height: 40px;
   font-family: var(--tp-ff-mont);
   padding-bottom: 10px;
@@ -6313,7 +6313,7 @@ input[type="color"] {
 }
 .tp-payment__content p {
   font-weight: 500;
-  font-size: 16px;
+  font-size: 18px;
   line-height: 24px;
   padding-bottom: 90px;
 }
@@ -6333,9 +6333,9 @@ input[type="color"] {
 }
 .tp-payment__content a {
   font-weight: 600;
-  font-size: 16px;
+  font-size: 18px;
   line-height: 12px;
-  font-family: var(--tp-ff-mont);
+  font-family: var(--tp-ff-body);
   color: var(--tp-common-black);
   position: relative;
 }
