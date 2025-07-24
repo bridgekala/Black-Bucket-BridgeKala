@@ -4855,19 +4855,19 @@ input[type="color"] {
 }
 
 .tp-hero-2__ptb {
-  padding-top: 150px;
+  /* padding-top: 70px !important; */
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
   .tp-hero-2__ptb {
-    padding-top: 130px;
+    padding-top: 100px;
   }
 }
 @media (max-width: 767px) {
   .tp-hero-2__ptb {
-    padding-top: 150px;
+    padding-top: 130px;
   }
 }
 .tp-hero-2__plr {
