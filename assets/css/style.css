@@ -4855,7 +4855,11 @@ input[type="color"] {
 }
 
 .tp-hero-2__ptb {
+<<<<<<< Updated upstream
   /* padding-top: 70px !important; */
+=======
+  padding-top: 70px;
+>>>>>>> Stashed changes
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
