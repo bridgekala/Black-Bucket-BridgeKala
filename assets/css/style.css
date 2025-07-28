@@ -4587,7 +4587,7 @@ input[type="color"] {
   font-size: 15px;
   line-height: 12px;
   letter-spacing: -0.02em;
-  font-family: var(--tp-ff-mont);
+  font-family: var(--tp-ff-body);
   color: var(--tp-common-white);
 }
 .tp-header-2__login:hover {
@@ -7780,7 +7780,7 @@ input[type="color"] {
   color: #000000;
 }
 .ab-company-fun-fact span {
-  font-weight: 600;
+  font-weight: 400;
   font-size: 14px;
   letter-spacing: 0.04em;
   color: #b2b2b8;
@@ -7788,8 +7788,9 @@ input[type="color"] {
   display: inline-block;
 }
 .ab-company-fun-fact h4 {
-  font-weight: 700;
+  font-weight: 400;
   font-size: 44px;
+  font-family: var(--tp-ff-body);
   line-height: 36px;
   color: #080829;
   padding-bottom: 5px;
