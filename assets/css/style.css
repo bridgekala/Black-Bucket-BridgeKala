@@ -2862,7 +2862,7 @@ input[type="color"] {
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
-  font-family: var(--tp-ff-mont);
+  font-family: "work sans";
   padding-right: 35px;
 }
 @media (max-width: 767px) {
@@ -10202,7 +10202,7 @@ input[type="color"] {
   font-weight: 400;
   font-size: 18px;
   line-height: 28px;
-  font-family: var(--tp-ff-mont);
+  font-family: "work sans";
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
   .tp-faq-section-box p br {
