@@ -7938,7 +7938,8 @@ input[type="color"] {
 }
 
 .journey-slider-active {
-  padding: 60px 0;
+  padding-bottom: 60px;
+  /* margin-bottom: 100px; */
 }
 
 .journey-stroke-text {
