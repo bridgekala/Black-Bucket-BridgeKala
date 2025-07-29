@@ -17640,6 +17640,6 @@ input[type="color"] {
   z-index: 1;
   color: white;
   text-align: center;
-  padding-top: 180px;
+  /* padding-top: 180px; */
   font-family: sans-serif;
 }
