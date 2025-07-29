@@ -17614,6 +17614,32 @@ input[type="color"] {
   left: 0;
   height: 100%;
   width: 100%;
-  background: rgba(0, 0, 0, 0.5); /* dark overlay */
+  /* background: rgba(0, 0, 0, 0.5); dark overlay */
   z-index: 0;
+}
+
+/* new bg */
+.video-section {
+  position: relative;
+  /* height: ; Adjust height as needed */
+  overflow: hidden;
+}
+
+.video-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.video-content {
+  position: relative;
+  z-index: 1;
+  color: white;
+  text-align: center;
+  padding-top: 180px;
+  font-family: sans-serif;
 }
