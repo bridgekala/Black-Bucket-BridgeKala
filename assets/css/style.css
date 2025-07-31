@@ -17725,7 +17725,7 @@ input[type="color"] {
 }
 
 .navMenu a div:hover {
-  background-color: white;
+  background-color: #BBF265        ;
   color: linear-gradient(180deg, #b1ff36 -23%, #1d863c 100%);
 }
 .navMenu a div.active {
