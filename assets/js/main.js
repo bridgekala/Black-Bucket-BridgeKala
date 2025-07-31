@@ -1333,3 +1333,66 @@ navLinks.forEach((link) => {
     link.classList.add("active");
   }
 });
+
+/* Navmenu js--------------------------------------------------------------------- */
+const navIcon = document.getElementById("navIcon");
+const navMenu = document.getElementById("navMenu");
+const navLink = navMenu.querySelectorAll("a");
+const menuItems = document.querySelectorAll("#navMenu a div");
+const mainCont = document.querySelector(".mainCont");
+let activeItem = document.querySelector(".navMenu a div.active");
+
+navIcon.addEventListener("click", () => {
+  navIcon.style.display = "none";
+  navMenu.classList.remove("navMenuHide");
+
+  // Bounce effect from top (pushes bottom)
+  mainCont.classList.remove("bounce-down");
+  void mainCont.offsetHeight;
+  mainCont.classList.add("bounce-down");
+
+  // Re-trigger animation for active menu
+  const activeItem = document.querySelector(".navMenu a div.active");
+  if (activeItem) {
+    activeItem.classList.remove("active");
+    void activeItem.offsetWidth;
+    activeItem.classList.add("active");
+  }
+});
+
+// On any nav link click — close menu, show icon
+navLink.forEach((link) => {
+  link.addEventListener("click", () => {
+    navMenu.classList.add("navMenuHide");
+    navIcon.style.display = "flex";
+  });
+});
+
+// Active state toggle
+menuItems.forEach((item) => {
+  item.addEventListener("click", (e) => {
+    e.preventDefault();
+
+    // Remove active from all
+    menuItems.forEach((el) => el.classList.remove("active"));
+
+    // Set active on clicked
+    item.classList.add("active");
+
+    // Update reference
+    activeItem = item;
+  });
+});
+
+// Fallback to Home if no active item
+if (!activeItem) {
+  document.querySelector(".navMenu a div").classList.add("active");
+}
+
+// Close menu when mouse leaves navMenu only (not full container)
+navMenu.addEventListener("mouseleave", () => {
+  if (!navMenu.classList.contains("navMenuHide")) {
+    navMenu.classList.add("navMenuHide");
+    navIcon.style.display = "flex";
+  }
+});
