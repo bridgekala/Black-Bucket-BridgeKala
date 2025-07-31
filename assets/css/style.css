@@ -8595,6 +8595,7 @@ input[type="color"] {
   display: inline-block;
   padding: 0px 15px;
   margin-bottom: 13px;
+  color: black;
 }
 .tp-service-sm-title {
   font-family: var(--tp-ff-urban);
