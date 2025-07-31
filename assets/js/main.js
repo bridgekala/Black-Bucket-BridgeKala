@@ -1378,7 +1378,6 @@ navLink.forEach((link) => {
 // Toggle active class on click
 menuItems.forEach((item) => {
   item.addEventListener("click", (e) => {
-   
     menuItems.forEach((el) => el.classList.remove("active"));
     item.classList.add("active");
     activeItem = item;
@@ -1394,4 +1393,37 @@ if (!activeItem) {
 navMenu.addEventListener("mouseleave", () => {
   navMenu.classList.add("navMenuHide");
   isMenuOpen = false;
+});
+
+// Automatically set active class based on current page
+window.addEventListener("DOMContentLoaded", () => {
+  const currentPath = window.location.pathname.split("/").pop(); // Get current file name
+  const navLinks = document.querySelectorAll("#navMenu a");
+
+  let activeFound = false;
+
+  navLinks.forEach((link) => {
+    const linkPath = link.getAttribute("href");
+    const menuItem = link.querySelector("div");
+
+    if (
+      linkPath === currentPath ||
+      (currentPath === "" && linkPath === "index.html")
+    ) {
+      menuItem.classList.add("active");
+      activeItem = menuItem;
+      activeFound = true;
+    } else {
+      menuItem.classList.remove("active");
+    }
+  });
+
+  // Default active if still none
+  if (!activeFound) {
+    const firstItem = document.querySelector("#navMenu a div");
+    if (firstItem) {
+      firstItem.classList.add("active");
+      activeItem = firstItem;
+    }
+  }
 });
