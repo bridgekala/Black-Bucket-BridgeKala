@@ -17653,11 +17653,12 @@ input[type="color"] {
   height: fit-content;
   /* background: red; */
   display: flex;
+  position: relative;
   flex-direction: column;
   align-items: center;
   border-radius: 40px;
   gap: 0px; /* was 15px – this causes spacing between button & menu */
-  overflow: hidden; /* hides menu overflow when collapsed */
+   /* hides menu overflow when collapsed */
 }
 
 .navIcon {
@@ -17673,7 +17674,7 @@ input[type="color"] {
   text-decoration: none;
   position: relative;
   overflow: hidden;
-  width: 150px;
+  width: 135px;
   transition: width 0.3s ease-in, background-color 0.2s ease-in;
 }
 .navIconHide {
@@ -17683,6 +17684,10 @@ input[type="color"] {
 .navMenu {
   display: flex;
   flex-direction: column;
+  position: absolute;
+  border-radius: 20px;
+  width: 190px;
+  z-index: 9999;
   gap: 15px;
   justify-content: center;
   overflow: hidden;
@@ -17765,7 +17770,7 @@ input[type="color"] {
 /* Hover Effects */
 .navIcon:hover {
   padding-right: 50px;
-  width: 180px;
+  width: 143px;
 }
 
 .navIcon:hover .menu-text {
