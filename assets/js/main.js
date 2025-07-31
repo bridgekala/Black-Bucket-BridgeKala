@@ -1378,7 +1378,7 @@ navLink.forEach((link) => {
 // Toggle active class on click
 menuItems.forEach((item) => {
   item.addEventListener("click", (e) => {
-    e.preventDefault();
+   
     menuItems.forEach((el) => el.classList.remove("active"));
     item.classList.add("active");
     activeItem = item;
