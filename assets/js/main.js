@@ -1338,20 +1338,25 @@ navLinks.forEach((link) => {
 const navIcon = document.getElementById("navIcon");
 const navMenu = document.getElementById("navMenu");
 const navLink = navMenu.querySelectorAll("a");
-const menuItems = document.querySelectorAll("#navMenu a div");
+const menuItems = document.querySelectorAll("#navMenu a div, .submenu-parent div");
 const mainCont = document.querySelector(".mainCont");
 let activeItem = document.querySelector(".navMenu a div.active");
 
 let isMenuOpen = false;
 
-// When nav icon is clicked
+// On menu icon click: toggle menu
 navIcon.addEventListener("click", () => {
   isMenuOpen = !isMenuOpen;
 
   if (isMenuOpen) {
-    navMenu.classList.remove("navMenuHide"); // ✅ Show menu
+    navMenu.classList.remove("navMenuHide");
 
-    // Bounce animation
+    // Reposition menu below icon
+    const rect = navIcon.getBoundingClientRect();
+    navMenu.style.top = `${rect.bottom + window.scrollY}px`;
+    navMenu.style.left = `${rect.left + window.scrollX}px`;
+
+    // Bounce effect
     mainCont.classList.remove("bounce-down");
     void mainCont.offsetHeight;
     mainCont.classList.add("bounce-down");
@@ -1363,19 +1368,19 @@ navIcon.addEventListener("click", () => {
       activeItem.classList.add("active");
     }
   } else {
-    navMenu.classList.add("navMenuHide"); // ✅ Hide menu
+    navMenu.classList.add("navMenuHide");
   }
 });
 
-// On any nav link click
+// Hide menu on any nav link click
 navLink.forEach((link) => {
   link.addEventListener("click", () => {
-    navMenu.classList.add("navMenuHide"); // ✅ Hide menu
+    navMenu.classList.add("navMenuHide");
     isMenuOpen = false;
   });
 });
 
-// Toggle active class on click
+// Active state on click
 menuItems.forEach((item) => {
   item.addEventListener("click", (e) => {
     menuItems.forEach((el) => el.classList.remove("active"));
@@ -1386,18 +1391,16 @@ menuItems.forEach((item) => {
 
 // Default active if none
 if (!activeItem) {
-  document.querySelector(".navMenu a div").classList.add("active");
+  const firstItem = document.querySelector(".navMenu a div");
+  if (firstItem) {
+    firstItem.classList.add("active");
+    activeItem = firstItem;
+  }
 }
 
-// Close menu on mouse leave
-navMenu.addEventListener("mouseleave", () => {
-  navMenu.classList.add("navMenuHide");
-  isMenuOpen = false;
-});
-
-// Automatically set active class based on current page
+// Auto set active based on URL
 window.addEventListener("DOMContentLoaded", () => {
-  const currentPath = window.location.pathname.split("/").pop(); // Get current file name
+  const currentPath = window.location.pathname.split("/").pop();
   const navLinks = document.querySelectorAll("#navMenu a");
 
   let activeFound = false;
@@ -1418,7 +1421,6 @@ window.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  // Default active if still none
   if (!activeFound) {
     const firstItem = document.querySelector("#navMenu a div");
     if (firstItem) {

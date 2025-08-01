@@ -68,42 +68,64 @@
         <div class="container-fluid g-0">
           <div class="row g-0 align-items-center justify-content-center">
             <div class="col-xl-2 col-lg-2 col-md-6 col-6">
-              <div class="mainCont">
-                <div id="navIcon" class="navIcon">
-                  <div class="icon-circle">
-                    <div class="pause-icon">
-                      <div class="bar"></div>
-                      <div class="bar"></div>
-                    </div>
+            <div class="mainCont">
+              <div id="navIcon" class="navIcon">
+                <div class="icon-circle">
+                  <div class="pause-icon">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
                   </div>
-                  <span class="menu-text">Menu</span>
                 </div>
-
-                <div
-                  id="navMenu"
-                  class="navMenu navMenuHide"
-                  style="position: absolute"
-                >
-                  <a href="index.html">
-                    <div>Home</div>
+                <span class="menu-text">Menu</span>
+              </div>
+            </div>
+            
+            <!-- Move this OUTSIDE of .mainCont -->
+            <div id="navMenu" class="navMenu navMenuHide">
+              <a href="index.html">
+                <div>Home</div>
+              </a>
+              <a href="about.html">
+                <div>About</div>
+              </a>
+            
+              <div class="has-submenu">
+                <a href="service.html" class="submenu-parent">
+                  <div>Service</div>
+                </a>
+                <div class="submenu">
+                  <a href="web-design.html">
+                    <div>Web Design</div>
                   </a>
-                  <a href="about.html">
-                    <div>About</div>
+                  <a href="seo.html">
+                    <div>SEO</div>
                   </a>
-                  <a href="service.html">
-                    <div>Service</div>
-                  </a>
-                  <a href="team.html">
-                    <div>Team</div>
-                  </a>
-                  <a href="contact.html">
-                    <div>Contact</div>
-                  </a>
-                  <a href="contact.html">
-                    <div>Download App</div>
+                  <a href="branding.html">
+                    <div>Branding</div>
                   </a>
                 </div>
               </div>
+            
+              <a href="team.html">
+                <div>Team</div>
+              </a>
+            
+              <div class="has-submenu">
+                <a href="download.html" class="submenu-parent">
+                  <div>Download App</div>
+                </a>
+                <div class="submenu">
+                  <a href="#">
+                    <div>Android</div>
+                  </a>
+                  <a href="#">
+                    <div>iOS</div>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+
             </div>
 
             <div class="col-xl-7 col-lg-7 d-none d-lg-block">
@@ -1089,7 +1111,7 @@
                         >
                           <div class="tp-payment-method__main-img z-index-3">
                             <img
-                              src="assets/img/payment-logo/Untitled (150 x 150 px).png"
+                              src="assets/img/payment-logo/main.png"
                               alt=""
                             />
                           </div>
