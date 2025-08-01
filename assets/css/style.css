@@ -2101,7 +2101,11 @@ input[type="color"] {
   bottom: -10%;
   right: 50px;
   font-size: 16px;
-  border-radius: 6px;
+  border-radius: 100%;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   z-index: 9;
   color: var(--tp-common-white);
   text-align: center;
@@ -2424,7 +2428,7 @@ input[type="color"] {
 }
 .about-banner-title {
   font-style: normal;
-  font-weight: 600;
+  /* font-weight: 600; */
   font-size: 110px;
   line-height: 1.2;
   letter-spacing: -0.02em;
@@ -2481,7 +2485,8 @@ input[type="color"] {
 }
 .about-img-title {
   font-style: normal;
-  font-weight: 600;
+  /* font-weight: 600; */
+  font-family: var(--tp-ff-mont);
   font-size: 110px;
   line-height: 1.2;
   letter-spacing: -0.02em;
@@ -3349,7 +3354,7 @@ input[type="color"] {
 
 .tp-section-title {
   font-weight: 700;
-  font-size: 50px;
+  font-size: 45px;
   line-height: 1.2;
 }
 .tp-section-title span {
@@ -3376,7 +3381,7 @@ input[type="color"] {
 
 .tp-section-title-lg {
   font-weight: 600;
-  font-size: 60px;
+  font-size: 55px;
   line-height: 1.1;
   letter-spacing: -0.04em;
   font-family: var(--tp-ff-mont);
@@ -6487,7 +6492,7 @@ input[type="color"] {
 }
 .tp-payment-method__main-img img {
   border-radius: 50%;
-  box-shadow: 0px 20px 60px rgba(0, 0, 0, 0.1);
+  /* box-shadow: 0px 20px 60px rgba(0, 0, 0, 0.1); */
   border-radius: 100px;
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
@@ -17671,7 +17676,7 @@ input[type="color"] {
   color: white;
   padding: 12px 18px 12px 1px;
   border-radius: 40px;
-  font-family: Arial, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
   font-size: 16px;
   text-decoration: none;
@@ -17714,7 +17719,7 @@ input[type="color"] {
 .navMenu a div {
   padding: 15px 20px 15px 2px;
   border-radius: 40px;
-  font-family: Arial, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
   text-align: center;
   width: 150px;
@@ -17836,4 +17841,11 @@ input[type="color"] {
   font-size: 25px;
   padding: 10px 0 10px 0;
   color: black;
+}
+/* -------------------------------------------------------------------------------------- */
+
+.headingClass{
+  font-family: var(--tp-ff-mont);
+  letter-spacing: 2px;
+  font-weight: normal;
 }
