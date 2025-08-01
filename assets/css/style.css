@@ -8275,7 +8275,7 @@ input[type="color"] {
   width: 100%;
 }
 .tp-service-2__user {
-  padding-left: 65px;
+  padding-left: 54px;
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
   .tp-service-2__user {
@@ -8301,7 +8301,7 @@ input[type="color"] {
   line-height: 24px;
   color: var(--tp-common-black);
   font-family: var(--tp-ff-body);
-  padding-bottom: 16px;
+  /* padding-bottom: 16px; */
   display: inline-block;
 }
 .tp-service-2__user span i {
