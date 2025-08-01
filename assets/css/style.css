@@ -2639,10 +2639,10 @@ input[type="color"] {
   display: inline-block;
 }
 .breadcrumb__title {
-  font-weight: 700;
+  font-weight: normal;
   font-size: 70px;
   line-height: 1.1;
-  letter-spacing: -0.02em;
+  /* letter-spacing: -0.02em; */
   color: #ffffff;
   padding-bottom: 12px;
 }
@@ -9150,12 +9150,13 @@ input[type="color"] {
   line-height: 16px;
   color: #000000;
   padding-bottom: 20px;
+  letter-spacing: 2px;
 }
 .sv-details-title {
   font-weight: 700;
   font-size: 40px;
   line-height: 50px;
-  letter-spacing: -0.02em;
+  letter-spacing: 2px;
   color: #202124;
 }
 @media (max-width: 767px) {
@@ -9272,6 +9273,7 @@ input[type="color"] {
   line-height: 20px;
   color: #202124;
   padding-bottom: 15px;
+  letter-spacing: 2px;
 }
 .sv-details-text ul li {
   list-style-type: none;
