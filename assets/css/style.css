@@ -4604,7 +4604,7 @@ input[type="color"] {
   color: var(--tp-theme-2);
 }
 .tp-header-2__right a {
-  margin-left: 25px;
+  margin-left: 10px;
 }
 
 .inner-header-2 .header-bottom__main-menu-inner nav ul li::before {
