@@ -1388,10 +1388,14 @@ menuItems.forEach((item) => {
 
 // Default active if none
 if (!activeItem) {
-  document.querySelector(".navMenu a div").classList.add("active");
+  const firstItem = document.querySelector(".navMenu a div");
+  if (firstItem) {
+    firstItem.classList.add("active");
+    activeItem = firstItem;
+  }
 }
 
-// Automatically set active class based on current page
+// Auto set active based on URL
 window.addEventListener("DOMContentLoaded", () => {
   const currentPath = window.location.pathname.split("/").pop(); // Get current file name
   const navLinks = document.querySelectorAll("#navMenu a");

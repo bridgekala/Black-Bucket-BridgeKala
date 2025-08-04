@@ -13,15 +13,16 @@
       type="image/x-icon"
       href="assets/img/favicon.png"
     />
-
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Italiana&display=swap"
+      rel="stylesheet"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Italiana&display=swap"
       rel="stylesheet"
     />
     <!-- CSS here -->
@@ -54,20 +55,28 @@
       class="scroll-top scroll-to-target tp-style-green"
       data-target="html"
     >
-      <!-- <i class="far fa-angle-double-up"></i> -->
-      <img src="assets/img/logo/logo-sticky.png" alt="" />
+      <i class="far fa-angle-double-up"></i>
     </button>
     <!-- back-to-top-end  -->
     <!--------------------------------------Nav--------------------------------------------- -->
     <!-- tp-header-area-start -->
     <header class="tp-header-height">
-      <div
-        id="header-sticky"
-        class="tp-header-2__area header-sticky-bg-2 tp-header-2__transparent tp-header-2__plr z-index-3"
-      >
+      <div id="header-sticky"
+        class="tp-header-2__area header-sticky-bg-2 tp-header-2__transparent tp-header-2__plr z-index-3">
         <div class="container-fluid g-0">
-          <div class="row g-0 align-items-center justify-content-center">
-            <div class="col-xl-2 col-lg-2 col-md-6 col-6">
+          <div class="row g-0 align-items-center justify-content-between">
+    
+            <!-- Mobile Logo -->
+            <div class="col-6 d-block d-lg-none">
+              <div class="tp-header-2__logo ps-3">
+                <a href="index.html">
+                  <img class="tp-section-logo" style="width: 60%;" src="assets/img/logo/2.png" alt="Logo">
+                </a>
+              </div>
+            </div>
+    
+            <!-- Mobile Menu Icon -->
+            <div class="col-6 d-flex d-lg-none justify-content-end pe-3">
               <div class="mainCont">
                 <div id="navIcon" class="navIcon">
                   <div class="icon-circle">
@@ -78,147 +87,91 @@
                   </div>
                   <span class="menu-text">Menu</span>
                 </div>
-
-                <div
-                  id="navMenu"
-                  class="navMenu navMenuHide"
-                  style="position: absolute"
-                >
+    
+                <div id="navMenu" class="navMenu navMenuHide" style="position: absolute">
                   <a href="index.html">
                     <div>Home</div>
                   </a>
                   <a href="about.html">
                     <div>About</div>
                   </a>
-                  <div id="serviceCont">
-                    <a id="servicebtn" href="service.html">
-                      <div>Service</div>
-                    </a>
-                    <ul id="serviceNavSubmenu" class="navSubmenuHide">
-                      <li><a href="mutualfundadvisoryservice.html">Mutual Fund Advisory</a></li>
-                      <li><a href="listedPreEquity.html">Listed & Pre-IPO Equity</a></li>
-                      <li><a href="insurancePlanning.html">Insurance Planning</a></li>
-                      <li><a href="creditSolution.html">Debt & Credit Solutions</a></li>
-                      <li><a href="realEstateAdv.html">Real Estate Advisory</a></li>
-                      <li><a href="artCultAssets.html">Art & Cultural Assets</a></li>
-                      <li><a href="sustainablePortfolios.html">ESG & Sustainable Portfolios</a></li>
-                      <li><a href="whiteGloveAdv.html">White-Glove Concierge Advisory</a></li>
-                    </ul>
-                  </div>
+                  <a href="service.html">
+                    <div>Service</div>
+                  </a>
                   <a href="team.html">
                     <div>Team</div>
                   </a>
                   <a href="contact.html">
                     <div>Contact</div>
                   </a>
-                  <div id="installCont">
-                    <a class="installbtn" >
-                      <div>Download App</div>
-                    </a>
-                    <ul id="installNavSubmenu" class="navSubmenuHide">
-                      <li><a href="">Android Version</a></li>
-                      <li><a href="">IOS Version</a></li>
-                    </ul>
-                  </div>
+                  <a href="contact.html">
+                    <div>Download App</div>
+                  </a>
                 </div>
               </div>
             </div>
-
+    
+            <!-- Desktop Left Menu Icon -->
+            <div class="col-xl-2 col-lg-2 d-none d-lg-block">
+              <div class="mainCont">
+                <div id="navIcon" class="navIcon">
+                  <div class="icon-circle">
+                    <div class="pause-icon">
+                      <div class="bar"></div>
+                      <div class="bar"></div>
+                    </div>
+                  </div>
+                  <span class="menu-text">Menu</span>
+                </div>
+    
+                <div id="navMenu" class="navMenu navMenuHide" style="position: absolute">
+                  <a href="index.html">
+                    <div>Home</div>
+                  </a>
+                  <a href="about.html">
+                    <div>About</div>
+                  </a>
+                  <a href="service.html">
+                    <div>Service</div>
+                  </a>
+                  <a href="team.html">
+                    <div>Team</div>
+                  </a>
+                  <a href="contact.html">
+                    <div>Contact</div>
+                  </a>
+                  <a href="contact.html">
+                    <div>Download App</div>
+                  </a>
+                </div>
+              </div>
+            </div>
+    
+            <!-- Desktop Center Logo -->
             <div class="col-xl-7 col-lg-7 d-none d-lg-block">
               <div class="tp-header-2__main-menu text-center">
                 <div class="tp-header-2__logo">
                   <a class="white-logo" href="index.html">
-                    <!-- <h3 class="tp-section-logo">BLACK BUCKET CONSULTANTS</h3> -->
-                    <img
-                      style="width: 55%"
-                      src="assets/img/logo/2.png"
-                      alt=""
-                    />
+                    <img class="tp-section-logo" style="width: 70%;" src="assets/img/logo/2.png" alt="">
                   </a>
                   <a class="black-logo" href="index.html">
-                    <!-- <h3 class="tp-section-logo2">BLACK BUCKET CONSULTANTS</h3> -->
-                    <img
-                      style="width: 55%"
-                      src="assets/img/logo/1.png"
-                      alt=""
-                    />
+                    <img class="tp-section-logo2" style="width: 70%;" src="assets/img/logo/1.png" alt="">
                   </a>
                 </div>
-
-                <!-- <nav id="mobile-menu">
-                  <ul>
-                    <li>
-                      <a href="index.html">Home</a>
-                    </li>
-                    <li>
-                      <a href="about.html">About</a>
-                    </li>
-                    <li>
-                      <a href="service.html">Service</a>
-                    </li>
-                    <li>
-                      <a href="team.html">Team</a>
-                    </li>
-                    <li><a href="contact.html">Contact</a></li>
-                  </ul>
-                </nav> -->
               </div>
             </div>
-            <div class="col-xl-3 col-lg-3 col-md-6 col-6">
-              <div
-                class="tp-header-2__right d-flex align-items-center justify-content-end"
-              >
-                <!-- Desktop Login + Button -->
-                <a
-                  class="tp-header-2__login d-none d-md-block"
-                  target="_blank"
-                  href="https://moneyworkshop.investwell.app/app/#/login"
-                  >Login</a
-                >
-                <a
-                  style="border-radius: 40px"
-                  class="tp-btn-green-sm d-none d-md-block"
-                  href="contact.html"
-                  >Get Started</a
-                >
-
-                <!-- Mobile Menu Icon + Nav Menu -->
-                <div class="mainCont d-lg-none">
-                  <div id="navIcon" class="navIcon">
-                    <div class="icon-circle">
-                      <div class="pause-icon">
-                        <div class="bar"></div>
-                        <div class="bar"></div>
-                      </div>
-                    </div>
-                    <span class="menu-text">Menu</span>
-                  </div>
-
-                  <div id="navMenu" class="navMenu navMenuHide">
-                    <a href="index.html">
-                      <div>Home</div>
-                    </a>
-                    <a href="about.html">
-                      <div>About</div>
-                    </a>
-                    <a href="service.html">
-                      <div>Service</div>
-                    </a>
-                    <a href="team.html">
-                      <div>Team</div>
-                    </a>
-                    <a href="contact.html">
-                      <div>Contact</div>
-                    </a>
-                  </div>
-                </div>
-              </div>
+    
+            <!-- Desktop Right Buttons -->
+            <div class="col-xl-3 col-lg-3 d-none d-lg-flex justify-content-end align-items-center">
+              <a class="tp-header-2__login" target="_blank"
+                href="https://moneyworkshop.investwell.app/app/#/login">Login</a>
+              <a style="border-radius: 40px" class="tp-btn-green-sm" href="contact.html">Get Started</a>
             </div>
           </div>
         </div>
       </div>
-      <!-- tp-header-area-end -->
     </header>
+
 
     <!-- tp-offcanvus-area-start -->
     <div class="tpoffcanvas-area">
@@ -276,10 +229,8 @@
           <!-- VIDEO BACKGROUND -->
           <div class="video-background">
             <video autoplay muted loop playsinline>
-              <source
-                src="assets/video/Spare Spin (dark) 1.1.mp4"
-                type="video/mp4"
-              />
+             
+              <source src="assets/video/SpareSpin(dark).mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
 
@@ -555,13 +506,13 @@
                 class="tp-counter-area tp-counter-space p-relative pb-140"
               >
                 <div class="tp-counter-shape-2">
-                  <!-- <img src="assets/img/counter/counter-shape-2.png" alt="" /> -->
+                  <img src="assets/img/counter/counter-shape-2.png" alt="" />
                 </div>
                 <div class="tp-counter-shape-3">
-                  <!-- <img src="assets/img/counter/counter-shape-2.png" alt="" /> -->
+                  <img src="assets/img/counter/counter-shape-2.png" alt="" />
                 </div>
                 <div class="tp-counter-shape-4 d-none d-sm-block">
-                  <!-- <img src="assets/img/counter/counter-shape-4.png" alt="" /> -->
+                  <img src="assets/img/counter/counter-shape-4.png" alt="" />
                 </div>
                 <div class="container">
                   <div class="tp-counter-wrapper p-relative">
@@ -631,16 +582,9 @@
                       <div
                         class="tp-service-section-wrapper mb-60 d-flex justify-content-between align-items-end"
                       >
-                        <div
-                          style="
-                            color: black;
-                            font-family: italiana;
-                            letter-spacing: 2px;
-                          "
-                          class="tp-section-title tp-title-anim"
-                        >
-                          Bespoke Financial Architecture
-                        </div>
+                        <h3 class="tp-section-title tp-title-anim">
+                          Your Wealth, Strategically Managed.
+                        </h3>
                         <a
                           class="tp-btn-inner tp-btn-hover alt-color-black wow tpfadeRight"
                           data-wow-duration=".9s"
@@ -1094,11 +1038,8 @@
                       <div
                         class="tp-payment-method__title-box text-center mb-20"
                       >
-                        <h3
-                          style="letter-spacing: 2px"
-                          class="tp-section-title-lg pb-10"
-                        >
-                          Sustainable Investing
+                        <h3 class="tp-section-title-lg pb-10">
+                          Your Capital, Our Expertise
                         </h3>
                         <p>
                           Personal and service-focused, ideal for a landing or
@@ -1116,7 +1057,10 @@
                           class="tp-payment-method__main-circle p-relative z-index"
                         >
                           <div class="tp-payment-method__main-img z-index-3">
-                            <img src="assets/img/payment/17.png" alt="" />
+                            <img
+                              src="assets/img/payment-logo/Untitled (150 x 150 px).png"
+                              alt=""
+                            />
                           </div>
                           <div class="tp-payment-method__line-1">
                             <div
@@ -1329,10 +1273,7 @@
               <div class="row align-items-center mb-50">
                 <div class="col-xl-6 col-lg-6">
                   <div class="tp-service-2__section-box">
-                    <h3
-                      style="letter-spacing: 2px; font-size: 45px"
-                      class="tp-section-title-lg pb-20"
-                    >
+                    <h3 class="tp-section-title-lg pb-20">
                       We deliver clarity across every financial touchpoint.
                     </h3>
                     <p>
@@ -1348,7 +1289,7 @@
                   data-wow-delay=".3s"
                 >
                   <div
-                    class="tp-service-2__user-box p-relative d-flex flex-wrap justify-content-lg-start align-items-center"
+                    class="tp-service-2__user-box p-relative d-flex flex-wrap justify-content-lg-start  align-items-center"
                   >
                     <div class="tp-service-2__user-shape">
                       <!-- keep your existing SVG -->
@@ -1381,11 +1322,8 @@
                       </svg>
                     </div>
                     <div class="tp-service-2__user">
-                      <span
-                        >₹600<span style="font-size: 25px">Cr</span>
-                        <i>+</i></span
-                      >
-                      <p>AUM</p>
+                      <span>₹600<span style="font-size: 25px;">Cr</span> <i>+</i></span>
+                      <p> AUM</p>
                     </div>
                     <div class="tp-service-2__user">
                       <span>6,000<i>+</i></span>
@@ -1586,10 +1524,7 @@
                 <div class="col-xl-6 col-lg-6">
                   <div class="tp-account-step-wrapper">
                     <div class="tp-account-section-box mb-40">
-                      <h3
-                        style="letter-spacing: 2px; width: 580px"
-                        class="tp-section-title-lg"
-                      >
+                      <h3 class="tp-section-title-lg">
                         Your Wealth Journey Begins Here
                       </h3>
                     </div>
@@ -1941,10 +1876,7 @@
                   data-wow-delay=".5s"
                 >
                   <div class="tp-card-title-box">
-                    <h3
-                      style="letter-spacing: 2px; width: 680px"
-                      class="tp-section-title pb-15"
-                    >
+                    <h3 class="tp-section-title pb-15">
                       Manage All Your Wealth Strategies in One Place
                     </h3>
                     <p>
@@ -1978,10 +1910,7 @@
                   data-wow-delay=".3s"
                 >
                   <div class="tp-sales-section-box pb-20">
-                    <h3
-                      style="letter-spacing: 2px"
-                      class="tp-section-title pb-15"
-                    >
+                    <h3 class="tp-section-title pb-15">
                       Track and Analyze Your Wealth in Real Time
                     </h3>
                     <p>
@@ -2052,9 +1981,7 @@
             <div style="text-align: center; margin-top: 300px; width: 30%">
               <div>
                 <div>
-                  <h1 style="color: #098d65; letter-spacing: 2px">
-                    Our Clients
-                  </h1>
+                  <h1 style="color: #098d65">Our Clients</h1>
                 </div>
                 <div>
                   <p>
@@ -2946,7 +2873,7 @@
                     <span class="tp-section-subtitle-5"
                       >CLIENTS & PROJECTS</span
                     >
-                    <h3 style="letter-spacing: 2px" class="tp-section-title-5">
+                    <h3 class="tp-section-title-5">
                       About Customer <span>Stories</span>
                     </h3>
                   </div>
@@ -2973,46 +2900,6 @@
                       class="swiper-container testimonial-five-slider-active"
                     >
                       <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                          <div class="tp-testimonial-five-item">
-                            <div
-                              class="tp-testimonial-five-wrapper d-flex justify-content-between align-items-center"
-                            >
-                              <div
-                                class="tp-testimonial-five-top-info d-flex align-items-center"
-                              >
-                                <div class="tp-testimonial-five-avata">
-                                  <img
-                                    src="assets/img/testimonial/testi-icon-5-2.png"
-                                    alt=""
-                                  />
-                                </div>
-                                <div class="tp-testimonial-five-author-info">
-                                  <h4>- Kushal Sareen</h4>
-                                  <span>Delhi based Entrepreneur</span>
-                                </div>
-                              </div>
-                              <div
-                                class="tp-testimonial-five-brand d-none d-sm-block"
-                              >
-                                <!-- <img
-                                  src="assets/img/testimonial/testi-logo-5-1.png"
-                                  alt=""
-                                /> -->
-                              </div>
-                            </div>
-                            <div class="tp-testimonial-five-content">
-                              <p>
-                                "Working with Mr. Pankaj and the entire Black
-                                Bucket Capital team has been a game-changer.
-                                From portfolio structuring to claim handling,
-                                they are meticulous, proactive, and always a
-                                step ahead. I sleep better knowing they’re
-                                managing my money."
-                              </p>
-                            </div>
-                          </div>
-                        </div>
                         <div class="swiper-slide">
                           <div class="tp-testimonial-five-item">
                             <div
@@ -3052,6 +2939,46 @@
                                 have helped me stay on track even during market
                                 chaos. I owe a large part of my financial peace
                                 to him."
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="tp-testimonial-five-item">
+                            <div
+                              class="tp-testimonial-five-wrapper d-flex justify-content-between align-items-center"
+                            >
+                              <div
+                                class="tp-testimonial-five-top-info d-flex align-items-center"
+                              >
+                                <div class="tp-testimonial-five-avata">
+                                  <img
+                                    src="assets/img/testimonial/testi-icon-5-2.png"
+                                    alt=""
+                                  />
+                                </div>
+                                <div class="tp-testimonial-five-author-info">
+                                  <h4>- Kushal Sareen</h4>
+                                  <span>Delhi based Entrepreneur</span>
+                                </div>
+                              </div>
+                              <div
+                                class="tp-testimonial-five-brand d-none d-sm-block"
+                              >
+                                <!-- <img
+                                  src="assets/img/testimonial/testi-logo-5-1.png"
+                                  alt=""
+                                /> -->
+                              </div>
+                            </div>
+                            <div class="tp-testimonial-five-content">
+                              <p>
+                                "Working with Mr. Pankaj and the entire Black
+                                Bucket Capital team has been a game-changer.
+                                From portfolio structuring to claim handling,
+                                they are meticulous, proactive, and always a
+                                step ahead. I sleep better knowing they’re
+                                managing my money."
                               </p>
                             </div>
                           </div>
@@ -3275,10 +3202,7 @@
                   <div class="tp-faq-left-wrapper p-relative">
                     <div class="tp-faq-section-box pb-20">
                       <h4 class="tp-section-subtitle-2">Support</h4>
-                      <h3
-                        style="letter-spacing: 2px"
-                        class="tp-section-title-lg"
-                      >
+                      <h3 class="tp-section-title-lg">
                         Frequently <br />
                         Asked Questions
                       </h3>
@@ -3457,10 +3381,7 @@
                     data-background="assets/img/cta/cta-bg.jpg"
                   >
                     <div class="tp-cta-content text-center">
-                      <h3
-                        style="letter-spacing: 2px"
-                        class="tp-section-title-lg text-white"
-                      >
+                      <h3 class="tp-section-title-lg text-white">
                         Start building your wealth today!
                       </h3>
                       <p>
