@@ -1343,6 +1343,8 @@ const mainCont = document.querySelector(".mainCont");
 let activeItem = document.querySelector(".navMenu a div.active");
 
 let isMenuOpen = false;
+let isHoveringNavMenu = false;
+let wasSubmenuOpened = false;
 
 // When nav icon is clicked
 navIcon.addEventListener("click", () => {
@@ -1389,12 +1391,6 @@ if (!activeItem) {
   document.querySelector(".navMenu a div").classList.add("active");
 }
 
-// Close menu on mouse leave
-navMenu.addEventListener("mouseleave", () => {
-  navMenu.classList.add("navMenuHide");
-  isMenuOpen = false;
-});
-
 // Automatically set active class based on current page
 window.addEventListener("DOMContentLoaded", () => {
   const currentPath = window.location.pathname.split("/").pop(); // Get current file name
@@ -1425,5 +1421,64 @@ window.addEventListener("DOMContentLoaded", () => {
       firstItem.classList.add("active");
       activeItem = firstItem;
     }
+  }
+});
+
+// Submenu Setup
+let serviceNavSubmenu = document.getElementById("serviceNavSubmenu");
+let installNavSubmenu = document.getElementById("installNavSubmenu");
+let servicebtn = document.getElementById("servicebtn");
+let installbtn = document.getElementById("installbtn");
+let installCont = document.getElementById("installCont");
+let serviceCont = document.getElementById("serviceCont");
+
+// Add submenu on mouseenter
+serviceCont.addEventListener("mouseenter", () => {
+  serviceNavSubmenu.classList.remove("navSubmenuHide");
+  serviceNavSubmenu.classList.add("navSubmenu");
+  wasSubmenuOpened = true;
+});
+
+// Hide submenu on mouseleave
+serviceCont.addEventListener("mouseleave", () => {
+  serviceNavSubmenu.classList.remove("navSubmenu");
+  serviceNavSubmenu.classList.add("navSubmenuHide");
+});
+
+// Add submenu on mouseenter
+installCont.addEventListener("mouseenter", () => {
+  installNavSubmenu.classList.remove("navSubmenuHide");
+  installNavSubmenu.classList.add("navSubmenu");
+  wasSubmenuOpened = true;
+});
+
+// Hide submenu on mouseleave
+installCont.addEventListener("mouseleave", () => {
+  installNavSubmenu.classList.remove("navSubmenu");
+  installNavSubmenu.classList.add("navSubmenuHide");
+});
+
+// Track hover on navMenu
+navMenu.addEventListener("mouseenter", () => {
+  isHoveringNavMenu = true;
+});
+navMenu.addEventListener("mouseleave", () => {
+  isHoveringNavMenu = false;
+
+  if (wasSubmenuOpened) {
+    setTimeout(() => {
+      const isServiceSubmenuHidden = serviceNavSubmenu.classList.contains("navSubmenuHide");
+      const isInstallSubmenuHidden = installNavSubmenu.classList.contains("navSubmenuHide");
+
+      if (!isHoveringNavMenu && isServiceSubmenuHidden && isInstallSubmenuHidden) {
+        navMenu.classList.add("navMenuHide");
+        isMenuOpen = false;
+        wasSubmenuOpened = false; // Reset for next time
+      }
+    }, 1100); // Adjust delay if needed
+  } else {
+    // No submenu opened, close menu immediately
+    navMenu.classList.add("navMenuHide");
+    isMenuOpen = false;
   }
 });

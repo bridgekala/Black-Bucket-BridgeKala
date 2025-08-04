@@ -4439,6 +4439,8 @@ input[type="color"] {
 .tp-header-2__plr {
   padding-left: 310px;
   padding-right: 310px;
+  padding-top: 26px;
+  padding-bottom: 26px;
 }
 @media only screen and (min-width: 1600px) and (max-width: 1800px) {
   .tp-header-2__plr {
@@ -17674,6 +17676,7 @@ input[type="color"] {
   border-radius: 40px;
   gap: 0px; /* was 15px – this causes spacing between button & menu */
    /* hides menu overflow when collapsed */
+   cursor: pointer;
 }
 
 .navIcon {
@@ -17710,13 +17713,15 @@ input[type="color"] {
   transition: height 0.2s ease-in, opacity 0.2s ease-in;
   opacity: 1;
   background: linear-gradient(180deg, #b1ff36 -23%, #1d863c 100%);
-  height: 430px;
+  /* height: 430px; */
+  padding: 15px;
+  pointer-events: auto;
 }
 
 .navMenuHide {
   height: 0;
   opacity: 0;
-  /* pointer-events: none; */
+  pointer-events: none;
 }
 
 .navMenu a {
@@ -17849,10 +17854,73 @@ input[type="color"] {
   padding: 10px 0 10px 0;
   color: black;
 }
-/* -------------------------------------------------------------------------------------- */
 
-.headingClass{
-  font-family: var(--tp-ff-mont);
-  letter-spacing: 2px;
-  font-weight: normal;
+.navSubmenu {
+
+display: block;
+  opacity: 1;
+  transition: 0.3s ease;
+padding: 3px;
+border-radius: 10px;
+ pointer-events: auto; 
+ background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(15px);
+   border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  transform: translateY(10px);
+  transition: all 0.3s ease-in-out;
+   animation: submenuFade 0.4s ease-out;
+}
+.navSubmenuHide {
+ display: none;
+  opacity: 0;
+  transition: 0.3s ease;
+   pointer-events: none; 
+   transform: translateY(-10px);
+transition: all 0.3s ease-in-out;
+}
+
+.navSubmenu li{
+
+  padding: 5px;
+  margin: 5px;
+  font-size: 12px;
+  list-style: none;
+  color: white;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+   background: rgba(255, 255, 255, 0.05);
+  transition: all 0.3s ease-in-out;
+}
+
+.navSubmenu li a {
+  color: white;
+  text-decoration: none;
+  display: block;
+  width: 100%;
+}
+
+
+.navSubmenu li:hover {
+  background: linear-gradient(135deg, #b1ff36, #1d863c);
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.navSubmenu li:hover a {
+  color: #032d15;
+  font-weight: bold;
+}
+
+@keyframes submenuFade {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
