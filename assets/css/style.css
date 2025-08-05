@@ -49,10 +49,8 @@
   --tp-ff-heading: "Italiana", serif;
   --tp-ff-fontawesome: Font Awesome 5 Pro;
   --tp-ff-mont: "Italiana", serif;
-  --tp-ff-urban: "Work Sans",
-    sans-serif;
-  --tp-ff-dm: "Work Sans",
-    sans-serif;
+  --tp-ff-urban: "Work Sans", sans-serif;
+  --tp-ff-dm: "Work Sans", sans-serif;
   /**
   @color declaration
   */
@@ -4446,9 +4444,8 @@ input[type="color"] {
   .tp-header-2__plr {
     padding-left: 250px;
     padding-right: 250px;
-    padding-top:10px ;
-    padding-bottom:10px ;
-    
+    padding-top: 10px;
+    padding-bottom: 10px;
   }
 }
 @media only screen and (min-width: 1400px) and (max-width: 1599px) {
@@ -10113,9 +10110,9 @@ input[type="color"] {
   color: rgba(255, 255, 255, 0.8);
 }
 .tp-rank__item:hover {
-  -webkit-transform: translate(-20px, -30px); 
-  -ms-transform: translate(-20px, -30px);  
-  transform: translate(-20px, -30px);         
+  -webkit-transform: translate(-20px, -30px);
+  -ms-transform: translate(-20px, -30px);
+  transform: translate(-20px, -30px);
   transition-delay: all 4s cubic-bezier(0.2, 0.8, 0.2, 1) 0s !important;
 }
 
@@ -16010,7 +16007,6 @@ input[type="color"] {
   font-size: 16px;
   line-height: 1.3;
   color: #5f6168;
-  
 }
 .contact-inner-title-sm {
   font-weight: 700;
@@ -17663,9 +17659,6 @@ input[type="color"] {
   font-family: sans-serif;
 }
 
-
-
-
 /*Nav Menu Styles------------------------------------------------------------------------------*/
 .mainCont {
   width: fit-content;
@@ -17677,8 +17670,8 @@ input[type="color"] {
   align-items: center;
   border-radius: 40px;
   gap: 0px; /* was 15px – this causes spacing between button & menu */
-   /* hides menu overflow when collapsed */
-   cursor: pointer;
+  /* hides menu overflow when collapsed */
+  cursor: pointer;
 }
 
 .navIcon {
@@ -17744,7 +17737,7 @@ input[type="color"] {
 }
 
 .navMenu a div:hover {
-  background-color: #BBF265        ;
+  background-color: #bbf265;
   color: linear-gradient(180deg, #b1ff36 -23%, #1d863c 100%);
 }
 .navMenu a div.active {
@@ -17845,44 +17838,42 @@ input[type="color"] {
   transform-origin: top; /* 🔥 this makes it bounce downward */
 }
 
-.tp-section-logo{
+.tp-section-logo {
   font-size: 25px;
   padding: 20px 0 20px 0;
   color: white;
 }
-.tp-section-logo2{
+.tp-section-logo2 {
   font-size: 25px;
   padding: 10px 0 10px 0;
   color: black;
 }
 
 .navSubmenu {
-
-display: block;
+  display: block;
   opacity: 1;
   transition: 0.3s ease;
-padding: 3px;
-border-radius: 10px;
- pointer-events: auto; 
- background: rgba(255, 255, 255, 0.06);
+  padding: 3px;
+  border-radius: 10px;
+  pointer-events: auto;
+  background: rgba(255, 255, 255, 0.06);
   backdrop-filter: blur(15px);
-   border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
   transform: translateY(10px);
   transition: all 0.3s ease-in-out;
-   animation: submenuFade 0.4s ease-out;
+  animation: submenuFade 0.4s ease-out;
 }
 .navSubmenuHide {
- display: none;
+  display: none;
   opacity: 0;
   transition: 0.3s ease;
-   pointer-events: none; 
-   transform: translateY(-10px);
-transition: all 0.3s ease-in-out;
+  pointer-events: none;
+  transform: translateY(-10px);
+  transition: all 0.3s ease-in-out;
 }
 
-.navSubmenu li{
-
+.navSubmenu li {
   padding: 5px;
   margin: 5px;
   font-size: 12px;
@@ -17892,7 +17883,7 @@ transition: all 0.3s ease-in-out;
   display: flex;
   justify-content: center;
   align-items: center;
-   background: rgba(255, 255, 255, 0.05);
+  background: rgba(255, 255, 255, 0.05);
   transition: all 0.3s ease-in-out;
 }
 
@@ -17902,7 +17893,6 @@ transition: all 0.3s ease-in-out;
   display: block;
   width: 100%;
 }
-
 
 .navSubmenu li:hover {
   background: linear-gradient(135deg, #b1ff36, #1d863c);
@@ -17925,4 +17915,3 @@ transition: all 0.3s ease-in-out;
     transform: translateY(0);
   }
 }
-
