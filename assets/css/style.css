@@ -10113,11 +10113,12 @@ input[type="color"] {
   color: rgba(255, 255, 255, 0.8);
 }
 .tp-rank__item:hover {
-  webkit-transform: translate(-20px, -30px);
-  -ms-transform: translate(-20px, -30px);
-  transform: translate(-20px, -30px);
+  -webkit-transform: translate(-20px, -30px); 
+  -ms-transform: translate(-20px, -30px);  
+  transform: translate(-20px, -30px);         
   transition-delay: all 4s cubic-bezier(0.2, 0.8, 0.2, 1) 0s !important;
 }
+
 .tp-rank__cup {
   position: absolute;
   top: -10px;
@@ -15618,6 +15619,7 @@ input[type="color"] {
 }
 .career-details-social-box a.instagram i {
   background: linear-gradient(261.91deg, #b900b4 0%, #f50000 40%, #ffd723 100%);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   transition: 0.3s;
