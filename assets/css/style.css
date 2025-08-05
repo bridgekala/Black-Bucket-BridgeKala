@@ -17712,8 +17712,7 @@ input[type="color"] {
   overflow: hidden;
   transition: height 0.2s ease-in, opacity 0.2s ease-in;
   opacity: 1;
-  background-color: #32CD32;
-  /* height: 430px; */
+  background-color: #3cc33c;
   padding: 15px;
   pointer-events: auto;
 }
