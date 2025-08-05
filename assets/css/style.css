@@ -10403,7 +10403,7 @@ input[type="color"] {
 
 .tp-sales-space {
   padding-top: 90px;
-  padding-bottom: 170px;
+  /* padding-bottom: 170px; */
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .tp-sales-space {
