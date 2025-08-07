@@ -17915,3 +17915,15 @@ input[type="color"] {
     transform: translateY(0);
   }
 }
+
+ #mobHead{
+    display: none;
+  }
+@media (max-width: 991px) {
+  #mobHead{
+    display: block;
+  }
+  #deskHead{
+    display: none;
+  }
+}

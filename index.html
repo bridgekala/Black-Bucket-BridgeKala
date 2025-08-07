@@ -58,9 +58,9 @@
       <img src="assets/img/logo/logo-sticky.png" alt="" />
     </button>
     <!-- back-to-top-end  -->
-    <!--------------------------------------Nav--------------------------------------------- -->
+    <!--------------------------------------DeskTop Nav--------------------------------------------- -->
     <!-- tp-header-area-start -->
-    <header class="tp-header-height">
+    <header id="deskHead" class="tp-header-height">
       <div
         id="header-sticky"
         class="tp-header-2__area header-sticky-bg-2 tp-header-2__transparent tp-header-2__plr z-index-3"
@@ -166,7 +166,6 @@
               <div class="tp-header-2__main-menu text-center">
                 <div class="tp-header-2__logo">
                   <a class="white-logo" href="index.html">
-                    <!-- <h3 class="tp-section-logo">BLACK BUCKET CONSULTANTS</h3> -->
                     <img
                       style="width: 55%"
                       src="assets/img/logo/2.png"
@@ -174,7 +173,6 @@
                     />
                   </a>
                   <a class="black-logo" href="index.html">
-                    <!-- <h3 class="tp-section-logo2">BLACK BUCKET CONSULTANTS</h3> -->
                     <img
                       style="width: 55%"
                       src="assets/img/logo/1.png"
@@ -188,7 +186,6 @@
               <div
                 class="tp-header-2__right d-flex align-items-center justify-content-end"
               >
-                <!-- Desktop Login + Button -->
                 <a
                   class="tp-header-2__login d-none d-md-block"
                   target="_blank"
@@ -210,35 +207,131 @@
                   href="contact.html"
                   >Get Started</a
                 >
-
-                <!-- Mobile Menu Icon + Nav Menu -->
-                <div class="mainCont d-lg-none">
-                  <div id="navIcon" class="navIcon">
-                    <div class="icon-circle">
-                      <div class="pause-icon">
-                        <div class="bar"></div>
-                        <div class="bar"></div>
-                      </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!--------------------------------------Mobile Nav--------------------------------------------- -->
+    <header id="mobHead" class="tp-header-height">
+      <div
+        id="header-sticky"
+        class="tp-header-2__area header-sticky-bg-2 tp-header-2__transparent tp-header-2__plr z-index-3"
+      >
+        <div class="container-fluid g-0">
+          <div class="row g-0 align-items-center justify-content-between">
+            <div class="col-xl-7 col-lg-7  d-lg-block">
+              <div class="tp-header-2__main-menu text-center">
+                <div class="tp-header-2__logo">
+                  <a class="white-logo" href="index.html">
+                    
+                    <img
+                      style="width: 55%"
+                      src="assets/img/logo/2.png"
+                      alt=""
+                    />
+                  </a>
+                  <a class="black-logo" href="index.html">
+                    <img
+                      style="width: 55%"
+                      src="assets/img/logo/1.png"
+                      alt=""
+                    />
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-2 col-lg-2 col-md-6 col-6">
+              <div class="mainCont">
+                <div id="navIcon" class="navIcon">
+                  <div class="icon-circle">
+                    <div class="pause-icon">
+                      <div class="bar"></div>
+                      <div class="bar"></div>
                     </div>
-                    <span class="menu-text">Menu</span>
                   </div>
+                  <span class="menu-text">Menu</span>
+                </div>
 
-                  <div id="navMenu" class="navMenu navMenuHide">
-                    <a href="index.html">
-                      <div>Home</div>
-                    </a>
-                    <a href="about.html">
-                      <div>About</div>
-                    </a>
-                    <a href="service.html">
+                <div
+                  id="navMenu"
+                  class="navMenu navMenuHide"
+                  style="position: absolute"
+                >
+                  <a href="index.html">
+                    <div>Home</div>
+                  </a>
+                  <a href="about.html">
+                    <div>About</div>
+                  </a>
+                  <div id="serviceCont">
+                    <a id="servicebtn" href="service.html">
                       <div>Service</div>
                     </a>
-                    <a href="team.html">
-                      <div>Team</div>
+                    <ul id="serviceNavSubmenu" class="navSubmenuHide">
+                      <li>
+                        <a href="mutualfundadvisoryservice.html"
+                          >Mutual Fund Advisory</a
+                        >
+                      </li>
+                      <li>
+                        <a href="listedPreEquity.html"
+                          >Listed & Pre-IPO Equity</a
+                        >
+                      </li>
+                      <li>
+                        <a href="insurancePlanning.html">Insurance Planning</a>
+                      </li>
+                      <li>
+                        <a href="creditSolution.html"
+                          >Debt & Credit Solutions</a
+                        >
+                      </li>
+                      <li>
+                        <a href="realEstateAdv.html">Real Estate Advisory</a>
+                      </li>
+                      <li>
+                        <a href="artCultAssets.html">Art & Cultural Assets</a>
+                      </li>
+                      <li>
+                        <a href="sustainablePortfolios.html"
+                          >ESG & Sustainable Portfolios</a
+                        >
+                      </li>
+                      <li>
+                        <a href="whiteGloveAdv.html"
+                          >White-Glove Concierge Advisory</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                  <a href="team.html">
+                    <div>Team</div>
+                  </a>
+                  <a href="contact.html">
+                    <div>Contact</div>
+                  </a>
+                  <div id="installCont">
+                    <a class="installbtn">
+                      <div>Download App</div>
                     </a>
-                    <a href="contact.html">
-                      <div>Contact</div>
-                    </a>
+                    <ul id="installNavSubmenu" class="navSubmenuHide">
+                      <li>
+                        <a
+                          target="_blank"
+                          href="https://play.google.com/store/apps/details?id=com.tvs.MoneyWorkShop&pli=1"
+                          >Android Version</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          target="_blank"
+                          href="https://apps.apple.com/in/app/money-workshop/id1194012320"
+                          >IOS Version</a
+                        >
+                      </li>
+                    </ul>
                   </div>
                 </div>
               </div>
@@ -246,8 +339,8 @@
           </div>
         </div>
       </div>
-      <!-- tp-header-area-end -->
     </header>
+    <!-- tp-header-area-end -->
 
     <!-- tp-offcanvus-area-start -->
     <div class="tpoffcanvas-area">
