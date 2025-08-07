@@ -17916,20 +17916,22 @@ input[type="color"] {
   }
 }
 
- #mobHead{
-    display: none;
-  }
+#mobHead {
+  display: none !important;
+}
+#deskHead {
+  display: block !important;
+}
 @media (max-width: 991px) {
-  #mobHead{
-    display: block;
+  #mobHead {
+    display: block !important;
   }
-  #deskHead{
-    display: none;
+  #deskHead {
+    display: none !important;
   }
 }
 
 /* mobile nav */
-
 
         .tp-header-height {
           background: #f9f9f9;
