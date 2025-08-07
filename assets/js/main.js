@@ -1509,4 +1509,4 @@ navMenu.addEventListener("mouseleave", () => {
       e.preventDefault();
       submenuDownloads.classList.toggle("active");
     });
-  });
+  }); 
