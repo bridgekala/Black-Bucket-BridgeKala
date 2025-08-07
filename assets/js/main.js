@@ -1484,28 +1484,29 @@ navMenu.addEventListener("mouseleave", () => {
 });
 
 // mobile nav 
-const btnToggleMenu = document.getElementById('btnToggleMenu');
-    const panelMainMenu = document.getElementById('panelMainMenu');
+     document.addEventListener("DOMContentLoaded", function () {
+    const btnToggleMenu = document.getElementById("btnToggleMenu");
+    const navPanel = document.getElementById("panelMainMenu");
 
-    const btnToggleServices = document.getElementById('btnToggleServices');
-    const submenuServices = document.getElementById('submenuServices');
+    const btnToggleServices = document.getElementById("btnToggleServices");
+    const submenuServices = document.getElementById("submenuServices");
 
-    const btnToggleDownloads = document.getElementById('btnToggleDownloads');
-    const submenuDownloads = document.getElementById('submenuDownloads');
+    const btnToggleDownloads = document.getElementById("btnToggleDownloads");
+    const submenuDownloads = document.getElementById("submenuDownloads");
 
-    // Toggle full nav menu
-    btnToggleMenu.addEventListener('click', () => {
-      panelMainMenu.classList.toggle('mobile-nav-show');
+    // Toggle mobile nav
+    btnToggleMenu.addEventListener("click", () => {
+      navPanel.classList.toggle("active");
     });
 
-    // Toggle Services submenu
-    btnToggleServices.addEventListener('click', (e) => {
+    // Toggle submenus
+    btnToggleServices.addEventListener("click", (e) => {
       e.preventDefault();
-      submenuServices.classList.toggle('submenu-visible');
+      submenuServices.classList.toggle("active");
     });
 
-    // Toggle Downloads submenu
-    btnToggleDownloads.addEventListener('click', (e) => {
+    btnToggleDownloads.addEventListener("click", (e) => {
       e.preventDefault();
-      submenuDownloads.classList.toggle('submenu-visible');
+      submenuDownloads.classList.toggle("active");
     });
+  });
