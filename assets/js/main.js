@@ -1482,3 +1482,30 @@ navMenu.addEventListener("mouseleave", () => {
     isMenuOpen = false;
   }
 });
+
+// mobile nav 
+const btnToggleMenu = document.getElementById('btnToggleMenu');
+    const panelMainMenu = document.getElementById('panelMainMenu');
+
+    const btnToggleServices = document.getElementById('btnToggleServices');
+    const submenuServices = document.getElementById('submenuServices');
+
+    const btnToggleDownloads = document.getElementById('btnToggleDownloads');
+    const submenuDownloads = document.getElementById('submenuDownloads');
+
+    // Toggle full nav menu
+    btnToggleMenu.addEventListener('click', () => {
+      panelMainMenu.classList.toggle('mobile-nav-show');
+    });
+
+    // Toggle Services submenu
+    btnToggleServices.addEventListener('click', (e) => {
+      e.preventDefault();
+      submenuServices.classList.toggle('submenu-visible');
+    });
+
+    // Toggle Downloads submenu
+    btnToggleDownloads.addEventListener('click', (e) => {
+      e.preventDefault();
+      submenuDownloads.classList.toggle('submenu-visible');
+    });

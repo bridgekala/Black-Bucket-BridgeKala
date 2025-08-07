@@ -215,130 +215,51 @@
     </header>
     <!--------------------------------------Mobile Nav--------------------------------------------- -->
     <header id="mobHead" class="tp-header-height">
-      <div
-        id="header-sticky"
-        class="tp-header-2__area header-sticky-bg-2 tp-header-2__transparent tp-header-2__plr z-index-3"
-      >
-        <div class="container-fluid g-0">
-          <div class="row g-0 align-items-center justify-content-between">
-            <div class="col-xl-7 col-lg-7  d-lg-block">
-              <div class="tp-header-2__main-menu text-center">
-                <div class="tp-header-2__logo">
-                  <a class="white-logo" href="index.html">
-                    
-                    <img
-                      style="width: 55%"
-                      src="assets/img/logo/2.png"
-                      alt=""
-                    />
-                  </a>
-                  <a class="black-logo" href="index.html">
-                    <img
-                      style="width: 55%"
-                      src="assets/img/logo/1.png"
-                      alt=""
-                    />
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div class="col-xl-2 col-lg-2 col-md-6 col-6">
-              <div class="mainCont">
-                <div id="navIcon" class="navIcon">
-                  <div class="icon-circle">
-                    <div class="pause-icon">
-                      <div class="bar"></div>
-                      <div class="bar"></div>
-                    </div>
-                  </div>
-                  <span class="menu-text">Menu</span>
-                </div>
-
-                <div
-                  id="navMenu"
-                  class="navMenu navMenuHide"
-                  style="position: absolute"
-                >
-                  <a href="index.html">
-                    <div>Home</div>
-                  </a>
-                  <a href="about.html">
-                    <div>About</div>
-                  </a>
-                  <div id="serviceCont">
-                    <a id="servicebtn" href="service.html">
-                      <div>Service</div>
-                    </a>
-                    <ul id="serviceNavSubmenu" class="navSubmenuHide">
-                      <li>
-                        <a href="mutualfundadvisoryservice.html"
-                          >Mutual Fund Advisory</a
-                        >
-                      </li>
-                      <li>
-                        <a href="listedPreEquity.html"
-                          >Listed & Pre-IPO Equity</a
-                        >
-                      </li>
-                      <li>
-                        <a href="insurancePlanning.html">Insurance Planning</a>
-                      </li>
-                      <li>
-                        <a href="creditSolution.html"
-                          >Debt & Credit Solutions</a
-                        >
-                      </li>
-                      <li>
-                        <a href="realEstateAdv.html">Real Estate Advisory</a>
-                      </li>
-                      <li>
-                        <a href="artCultAssets.html">Art & Cultural Assets</a>
-                      </li>
-                      <li>
-                        <a href="sustainablePortfolios.html"
-                          >ESG & Sustainable Portfolios</a
-                        >
-                      </li>
-                      <li>
-                        <a href="whiteGloveAdv.html"
-                          >White-Glove Concierge Advisory</a
-                        >
-                      </li>
-                    </ul>
-                  </div>
-                  <a href="team.html">
-                    <div>Team</div>
-                  </a>
-                  <a href="contact.html">
-                    <div>Contact</div>
-                  </a>
-                  <div id="installCont">
-                    <a class="installbtn">
-                      <div>Download App</div>
-                    </a>
-                    <ul id="installNavSubmenu" class="navSubmenuHide">
-                      <li>
-                        <a
-                          target="_blank"
-                          href="https://play.google.com/store/apps/details?id=com.tvs.MoneyWorkShop&pli=1"
-                          >Android Version</a
-                        >
-                      </li>
-                      <li>
-                        <a
-                          target="_blank"
-                          href="https://apps.apple.com/in/app/money-workshop/id1194012320"
-                          >IOS Version</a
-                        >
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+     <div class="mobile-wrapper">
+    <!-- Toggle Button -->
+    <div id="btnToggleMenu" class="menu-toggle">
+      <div class="menu-icon-box">
+        <div class="menu-lines">
+          <div class="line"></div>
+          <div class="line"></div>
         </div>
       </div>
+      <span class="menu-label">Menu</span>
+    </div>
+
+    <!-- Navigation Menu -->
+    <nav id="panelMainMenu" class="mobile-nav-panel">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+
+      <!-- Services Submenu -->
+      <div>
+        <a href="#" id="btnToggleServices" class="submenu-trigger">Our Services</a>
+        <ul id="submenuServices" class="submenu-list">
+          <li><a href="mutualfundadvisoryservice.html">Mutual Fund Advisory</a></li>
+          <li><a href="listedPreEquity.html">Listed & Pre-IPO Equity</a></li>
+          <li><a href="insurancePlanning.html">Insurance Planning</a></li>
+          <li><a href="creditSolution.html">Debt & Credit Solutions</a></li>
+          <li><a href="realEstateAdv.html">Real Estate Advisory</a></li>
+          <li><a href="artCultAssets.html">Art & Cultural Assets</a></li>
+          <li><a href="sustainablePortfolios.html">ESG & Sustainable Portfolios</a></li>
+          <li><a href="whiteGloveAdv.html">White-Glove Concierge Advisory</a></li>
+        </ul>
+      </div>
+
+      <a href="team.html">Our Team</a>
+      <a href="contact.html">Contact</a>
+
+      <!-- Download Submenu -->
+      <div>
+        <a href="#" id="btnToggleDownloads" class="submenu-trigger">Download App</a>
+        <ul id="submenuDownloads" class="submenu-list">
+          <li><a target="_blank" href="https://play.google.com/store/apps/details?id=com.tvs.MoneyWorkShop&pli=1">Android</a></li>
+          <li><a target="_blank" href="https://apps.apple.com/in/app/money-workshop/id1194012320">iOS</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
     </header>
     <!-- tp-header-area-end -->
 
