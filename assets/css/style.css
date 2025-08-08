@@ -17916,21 +17916,6 @@ input[type="color"] {
   }
 }
 
-#mobHead {
-  display: none !important;
-}
-#deskHead {
-  display: block !important;
-}
-@media (max-width: 991px) {
-  #mobHead {
-    display: block !important;
-  }
-  #deskHead {
-    display: none !important;
-  }
-}
-
 /* mobile nav */
 
 .tp-header-height {
@@ -18022,4 +18007,26 @@ input[type="color"] {
 .submenu-trigger {
   cursor: pointer;
   color: #007bff;
+}
+
+.mainheader{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.blackbucketcenterlogo img{
+  width: 55%;
+}
+
+@media (max-width: 767px) {
+  .mainheader{
+    flex-direction: row-reverse;
+  }
+  .login-getstarted{
+    display: none;
+  }
+.blackbucketcenterlogo img{
+  width: 100%;
+}
 }

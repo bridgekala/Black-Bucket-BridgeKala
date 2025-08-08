@@ -1528,3 +1528,26 @@ navMenu.addEventListener("mouseleave", () => {
     });
   }
 });
+
+
+
+function swapLogos() {
+    const whiteLogo = document.querySelector(".white-logo img");
+    const blackLogo = document.querySelector(".black-logo img");
+
+    if (window.innerWidth <= 767) {
+      // Small screen sources
+      whiteLogo.src = "assets/img/logo/logo-footer1.png";
+      blackLogo.src = "assets/img/logo/logo-footer.png";
+    } else {
+      // Large screen sources
+      whiteLogo.src = "assets/img/logo/2.png";
+      blackLogo.src = "assets/img/logo/1.png";
+    }
+  }
+
+  // Run on page load
+  swapLogos();
+
+  // Run on window resize
+  window.addEventListener("resize", swapLogos);
