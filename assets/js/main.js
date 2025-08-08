@@ -1510,3 +1510,21 @@ navMenu.addEventListener("mouseleave", () => {
       submenuDownloads.classList.toggle("active");
     });
   }); 
+
+  document.addEventListener("DOMContentLoaded", function () {
+  const scrollLink = document.querySelector(".tp-hero-2__mouse-scroll a");
+
+  if (scrollLink) {
+    scrollLink.addEventListener("click", function (e) {
+      e.preventDefault(); // stop jumping to href
+
+      const targetSection = document.querySelector(".tp-account-area");
+      if (targetSection) {
+        window.scrollTo({
+          top: targetSection.offsetTop,
+          behavior: "smooth"
+        });
+      }
+    });
+  }
+});
