@@ -2658,7 +2658,12 @@ input[type="color"] {
   .breadcrumb__title {
     font-size: 40px;
     line-height: 1.2;
+    text-align: center;
   }
+
+    .breadcrumb__list{
+      text-align: center;
+    }
 }
 .breadcrumb__list {
   display: inline-block;
@@ -3375,12 +3380,13 @@ input[type="color"] {
 @media (max-width: 767px) {
   .tp-section-title {
     font-size: 33px;
+    text-align: center;
   }
 }
 
 .tp-section-title-lg {
   font-weight: 600;
-  font-size: 55px;
+  font-size: 45px;
   line-height: 1.1;
   letter-spacing: 2px;
   font-family: var(--tp-ff-mont);
@@ -3405,7 +3411,7 @@ input[type="color"] {
 }
 @media (max-width: 767px) {
   .tp-section-title-lg {
-    font-size: 32px;
+    font-size: 25px;
     text-align: center;
   }
   .tp-section-title-lg br {
@@ -8250,7 +8256,7 @@ input[type="color"] {
 }
 @media (max-width: 767px) {
   .tp-service-2__section-box p {
-    font-size: 17px;
+    font-size: 15px;
     text-align: center;
   }
 }
@@ -8687,6 +8693,10 @@ input[type="color"] {
   (max-width: 767px) {
   .tp-service-section-wrapper {
     flex-wrap: wrap;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
   }
 }
 
@@ -10227,10 +10237,18 @@ input[type="color"] {
 @media (max-width: 767px) {
   .tp-faq-section-box p {
     font-size: 16px;
+    text-align: center;
   }
   .tp-faq-section-box p br {
     display: none;
   }
+    .tp-section-subtitle-2{
+      display: none;
+    }
+
+        .ab-company-section-text p{
+          text-align: center;
+        }
 }
 
 .tp-inner-faq-box .tp-section-subtitle-2 {
@@ -10433,6 +10451,7 @@ input[type="color"] {
   .tp-sales-section-box p {
     font-size: 16px;
     line-height: 25px;
+    text-align: center;
   }
   .tp-sales-section-box p br {
     display: none;
