@@ -17781,11 +17781,6 @@ input[type="color"] {
   color: white;
 }
 
-/* Hover Effects */
-.navIcon:hover {
-  padding-right: 50px;
-  width: 143px;
-}
 
 .navIcon:hover .menu-text {
   opacity: 0;
