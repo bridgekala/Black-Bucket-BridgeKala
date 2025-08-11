@@ -18471,10 +18471,16 @@ input[type="color"] {
 
 /* Show arrows only on mobile */
 @media (max-width: 767px) {
+
+  .mainheader{
+    gap: 150px;
+  }
+
   .service-arrow,
   .install-arrow {
     display: inline-block;
   }
+
 
   /* Keep arrows close to text for Service & Download items */
   #navMenu #serviceCont a div,
