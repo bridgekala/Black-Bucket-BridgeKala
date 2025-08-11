@@ -18430,7 +18430,15 @@ input[type="color"] {
   .ab-brand-border-bottom {
     padding-bottom: 0 !important;
   }
-  .about-bg-main{
+  .about-bg-main {
     background-position: right;
+  }
+  .tp-payment-method__main-img {
+    width: 50% !important;
+    height: 50% !important;
+  }
+  .allRoundImg {
+    width: 50px !important;
+    height: 50px !important;
   }
 }
