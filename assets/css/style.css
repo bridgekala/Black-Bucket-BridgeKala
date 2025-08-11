@@ -2393,7 +2393,6 @@ input[type="color"] {
   margin-bottom: 15px;
   display: inline-block;
 }
-
 .tpoffcanvas-social {
   height: 100%;
   display: flex;
@@ -3928,16 +3927,16 @@ input[type="color"] {
   top: 0;
   left: 0;
   right: 0;
-  background-color: var(--tp-common-white) !important;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+      background-color: var(--tp-common-white) !important;
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
   opacity: 1;
   visibility: visible;
   width: 100%;
-  box-shadow: 0px 4px 10px rgba(3, 4, 28, 0.2);
+      box-shadow: 0px 4px 10px rgba(3, 4, 28, 0.2);
   animation: 600ms ease-in-out 0s normal none 1 running fadeInDown;
-  z-index: 9999 !important;
-}
+      z-index: 9999 !important;
+    }
 /* Logo display will be controlled by JavaScript */
 .header-sticky-bg-2.header-sticky .header-bottom__main-menu-inner ul li a {
   color: var(--tp-common-black);
@@ -7181,7 +7180,6 @@ input[type="color"] {
     padding-top: 130px;
   }
 }
-
 .tp-platform-text p {
   font-weight: 400;
   font-size: 17px;
@@ -12603,7 +12601,7 @@ input[type="color"] {
   }
 }
 
-.tp-brand-title-5 {
+.tp-barnd-title-5 {
   font-weight: 500;
   font-size: 20px;
   line-height: 20px;
@@ -12759,7 +12757,6 @@ input[type="color"] {
 .tp-counter-wrapper .row [class*="col-"]:last-child .tp-counter-wrap {
   border-right: 0;
 }
-
 .tp-fun-fact-item h4 {
   font-weight: 700;
   font-size: 50px;
@@ -18027,7 +18024,7 @@ input[type="color"] {
 
 .mainheader {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
 }
 
@@ -18258,93 +18255,89 @@ input[type="color"] {
     font-size: 12px;
   }
 
-  .stat:not(:last-child)::after {
-    height: 30px;
-    width: 1px;
-  }
-
-  /* Fix mobile header issues */
-  .tp-header-height {
-    background-color: transparent !important;
-    position: relative;
-    z-index: 1000;
-  }
-
-  .header-sticky-bg-2 {
-    background-color: transparent !important;
-    position: relative;
-    z-index: 1000;
-  }
-
-  .header-sticky-bg-2.header-sticky {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    background-color: var(--tp-common-white) !important;
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    opacity: 1;
-    visibility: visible;
-    width: 100%;
-    box-shadow: 0px 4px 10px rgba(3, 4, 28, 0.2);
-    animation: 600ms ease-in-out 0s normal none 1 running fadeInDown;
-    z-index: 9999 !important;
-  }
-
-  .header-sticky-bg-2.header-sticky
-    .tp-header-2__main-menu
-    > nav
-    > ul
-    > li
-    > a {
-    color: var(--tp-common-black);
-    padding: 20px 0;
-  }
-
-  .header-sticky-bg-2.header-sticky .tp-header-2__right .tp-header-2__login {
-    color: var(--tp-common-black);
-  }
-
-  .header-sticky-bg-2.header-sticky
-    .tp-header-2__right
-    .tp-header-2__login:hover {
-    color: var(--tp-theme-2);
-  }
-
-  /* Logo display will be controlled by JavaScript */
-
-  /* Ensure mainheader stays on top */
-  .mainheader {
-    position: relative;
-    z-index: 1001;
-  }
-
-  /* Fix navigation menu positioning */
-  .navMenu {
-    backdrop-filter: blur(15px);
-    -webkit-backdrop-filter: blur(15px);
-    z-index: 10000 !important;
-  }
-
-  /* Ensure video background doesn't interfere */
-  .video-background {
-    z-index: 1;
-  }
-
-  .video-background .content {
-    z-index: 2;
-  }
-
-  /* Fix any potential white background from other elements */
-  .tp-header-2__transparent {
-    background-color: transparent !important;
-  }
-
-  .tp-header-2__plr {
-    background-color: transparent !important;
-  }
+    .stat:not(:last-child)::after {
+        height: 30px;
+        width: 1px;
+    }
+    
+    /* Fix mobile header issues */
+    .tp-header-height{
+      background-color: transparent !important;
+      position: relative;
+      z-index: 1000;
+    }
+    
+    .header-sticky-bg-2 {
+      background-color: transparent !important;
+      position: relative;
+      z-index: 1000;
+    }
+    
+    .header-sticky-bg-2.header-sticky {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      background-color: var(--tp-common-white) !important;
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      opacity: 1;
+      visibility: visible;
+      width: 100%;
+      box-shadow: 0px 4px 10px rgba(3, 4, 28, 0.2);
+      animation: 600ms ease-in-out 0s normal none 1 running fadeInDown;
+      z-index: 9999 !important;
+    }
+    
+    .header-sticky-bg-2.header-sticky .tp-header-2__main-menu > nav > ul > li > a {
+      color: var(--tp-common-black);
+      padding: 20px 0;
+    }
+    
+    .header-sticky-bg-2.header-sticky .tp-header-2__right .tp-header-2__login {
+      color: var(--tp-common-black);
+    }
+    
+    .header-sticky-bg-2.header-sticky .tp-header-2__right .tp-header-2__login:hover {
+      color: var(--tp-theme-2);
+    }
+    
+    /* Logo display will be controlled by JavaScript */
+    
+    /* Ensure mainheader stays on top */
+    .mainheader {
+      position: relative;
+      z-index: 1001;
+    }
+    
+    /* Fix navigation menu positioning */
+    /* .navMenu {
+      backdrop-filter: blur(15px);
+      -webkit-backdrop-filter: blur(15px);
+      z-index: 10000 !important;
+      right: 10px !important;
+      left: auto !important;
+    } */
+    
+    /* Ensure video background doesn't interfere */
+    .video-background {
+      z-index: 1;
+    }
+    
+    .video-background .content {
+      z-index: 2;
+    }
+    
+    /* Fix any potential white background from other elements */
+    .tp-header-2__transparent {
+      background-color: transparent !important;
+    }
+    
+    .tp-header-2__plr {
+      background-color: transparent !important;
+    }
 }
+
 
 /* Additional global header fixes for all screen sizes */
 .tp-header-height {
@@ -18367,7 +18360,6 @@ input[type="color"] {
 .video-background .content {
   z-index: 2;
 }
-
 .mainheader {
   position: relative;
   z-index: 1001;
@@ -18427,24 +18419,76 @@ input[type="color"] {
   }
 
   /* Do not alter menu container backgrounds here; only header transparency handled */
-  .ab-brand-border-bottom {
-    padding-bottom: 0 !important;
+}
+
+/* Service menu arrow styling */
+.service-arrow {
+  display: none; /* hidden by default (desktop/tablet) */
+  font-size: 1.1em;
+  transition: transform 0.2s;
+  cursor: pointer;
+  user-select: none;
+}
+.service-arrow.open {
+  transform: rotate(180deg);
+}
+.service-arrow:hover {
+  color: var(--tp-theme-2);
+}
+
+/* Download App menu arrow styling */
+.install-arrow {
+  display: none; /* hidden by default (desktop/tablet) */
+  font-size: 1.1em;
+  transition: transform 0.2s;
+  cursor: pointer;
+  user-select: none;
+}
+.install-arrow.open {
+  transform: rotate(180deg);
+}
+.install-arrow:hover {
+  color: var(--tp-theme-2);
+}
+
+/* Show arrows only on mobile */
+@media (max-width: 767px) {
+  .service-arrow,
+  .install-arrow {
+    display: inline-block;
   }
-  .about-bg-main {
-    background-position: right;
+
+  /* Keep arrows close to text for Service & Download items */
+  #navMenu #serviceCont a div,
+  #navMenu #installCont a div {
+    width: auto !important;
+    margin-right: 6px !important; /* reduce gap before arrow */
+    padding-right: 10px !important;
+    display: inline-flex;
+    align-items: center;
   }
-  .tp-payment-method__main-img {
-    width: 50% !important;
-    height: 50% !important;
+  .service-arrow,
+  .install-arrow {
+    margin-left: 1px !important; /* override inline margin to tighten gap */
   }
-  .allRoundImg {
-    width: 50px !important;
-    height: 50px !important;
-  }
-  .tp-service-area {
-    padding-bottom: 30px !important;
-  }
-  .tp-service-2__area {
-    padding-bottom: 90px !important;
-  }
+}
+
+/* Remove underline from Service & Download links in nav menu */
+#navMenu #serviceCont #servicebtn,
+#navMenu #installCont .installbtn,
+#navMenu #serviceCont #servicebtn div,
+#navMenu #installCont .installbtn div {
+  text-decoration: none !important;
+}
+#navMenu #serviceCont #servicebtn:hover,
+#navMenu #installCont .installbtn:hover,
+#navMenu #serviceCont #servicebtn:focus,
+#navMenu #installCont .installbtn:focus {
+  text-decoration: none !important;
+}
+
+/* Ensure Service & Download text color matches other items */
+#navMenu #serviceCont #servicebtn div,
+#navMenu #installCont .installbtn div {
+  color: #04580f !important; /* same as .navMenu a div color */
 }
