@@ -103,8 +103,28 @@
     var scroll = windowOn.scrollTop();
     if (scroll < 400) {
       $("#header-sticky").removeClass("header-sticky");
+      // Show white logo, hide black logo when not sticky
+      $(".white-logo").show();
+      $(".black-logo").hide();
     } else {
       $("#header-sticky").addClass("header-sticky");
+      // Show black logo, hide white logo when sticky
+      $(".white-logo").hide();
+      $(".black-logo").show();
+    }
+    
+    // Additional mobile header fixes
+    if (window.innerWidth <= 767) {
+      var headerElement = document.getElementById("header-sticky");
+      if (headerElement) {
+        if (scroll < 400) {
+          headerElement.style.position = "relative";
+          headerElement.style.zIndex = "1000";
+        } else {
+          headerElement.style.position = "fixed";
+          headerElement.style.zIndex = "9999";
+        }
+      }
     }
   });
 
