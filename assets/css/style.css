@@ -18430,4 +18430,7 @@ input[type="color"] {
   .ab-brand-border-bottom {
     padding-bottom: 0 !important;
   }
+  .about-bg-main{
+    background-position: right;
+  }
 }
