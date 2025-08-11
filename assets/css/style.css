@@ -18199,6 +18199,23 @@ input[type="color"] {
   align-items: center;
   width: 100%;
 }
+.tp-account-btn-box, .tp-faq-btn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.tp-btn-inner{
+   display: flex;
+  justify-content: center;
+  align-items: center;
+  /* width: 100%; */
+}
+.tp-sales-feature{
+   display: flex;
+  justify-content: center;
+  align-items: center;
+}
   .stats-section {
         flex-wrap: wrap; /* Allow items to wrap if screen too narrow */
         gap: 20px;
@@ -18242,6 +18259,10 @@ input[type="color"] {
     .stat:not(:last-child)::after {
         height: 30px;
         width: 1px;
+    }
+    .tp-header-height{
+      background-color: #03261C;
+      border-bottom: none;
     }
 }
 .tp-header-2__area {
