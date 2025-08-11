@@ -1554,13 +1554,10 @@ document.addEventListener('DOMContentLoaded', function () {
     if (!clickInsideNav && navIcon && !navIcon.contains(e.target)) hideMenu();
   }
   function addMobileClicks() {
-    if (servicebtn) servicebtn.addEventListener('click', serviceClick);
-    if (installbtn) installbtn.addEventListener('click', installClick);
+    // Only use outside click to close; links should navigate normally.
     document.addEventListener('click', outsideClick);
   }
   function removeMobileClicks() {
-    if (servicebtn) servicebtn.removeEventListener('click', serviceClick);
-    if (installbtn) installbtn.removeEventListener('click', installClick);
     document.removeEventListener('click', outsideClick);
   }
 
@@ -1622,4 +1619,31 @@ document.addEventListener('DOMContentLoaded', function () {
   }
   swapLogos();
   window.addEventListener('resize', swapLogos);
+
+  // --- Service arrow dropdown toggle ---
+  const serviceArrow = serviceCont && serviceCont.querySelector('.service-arrow');
+  if (serviceArrow && serviceNavSubmenu) {
+    serviceArrow.addEventListener('click', function(e) {
+      e.stopPropagation();
+      toggleSubmenu(serviceNavSubmenu);
+      serviceArrow.classList.toggle('open');
+    });
+  }
+  // Ensure clicking Service link navigates (no preventDefault anywhere)
+  if (servicebtn) {
+    servicebtn.addEventListener('click', function(e){ /* allow default navigation */ });
+  }
+
+  // --- Download App arrow dropdown toggle ---
+  const installArrow = installCont && installCont.querySelector('.install-arrow');
+  if (installArrow && installNavSubmenu) {
+    installArrow.addEventListener('click', function(e) {
+      e.stopPropagation();
+      toggleSubmenu(installNavSubmenu);
+      installArrow.classList.toggle('open');
+    });
+  }
+  if (installbtn) {
+    installbtn.addEventListener('click', function(e){ /* allow default navigation */ });
+  }
 });
