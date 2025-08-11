@@ -45,6 +45,40 @@
     }
   });
 
+  // Ensure correct header state on initial load and when resizing (mobile)
+  function updateMobileHeaderState() {
+    if (window.innerWidth <= 767) {
+      var scroll = windowOn.scrollTop();
+      var headerElement = document.getElementById("header-sticky");
+      var headerWrapper = document.querySelector(".tp-header-height");
+      if (headerElement && headerWrapper) {
+        if (scroll < 400) {
+          headerElement.style.position = "absolute";
+          headerElement.style.top = "0";
+          headerElement.style.left = "0";
+          headerElement.style.right = "0";
+          headerElement.style.zIndex = "1000";
+          headerElement.style.backgroundColor = "transparent";
+          headerWrapper.style.height = "0px";
+          headerWrapper.style.padding = "0";
+          headerWrapper.style.backgroundColor = "transparent";
+        } else {
+          headerElement.style.position = "fixed";
+          headerElement.style.top = "0";
+          headerElement.style.left = "0";
+          headerElement.style.right = "0";
+          headerElement.style.zIndex = "9999";
+          var h = headerElement.offsetHeight || 0;
+          headerWrapper.style.height = h + "px";
+          headerWrapper.style.padding = "0";
+        }
+      }
+    }
+  }
+  // Run once and on resize
+  updateMobileHeaderState();
+  window.addEventListener("resize", updateMobileHeaderState);
+
   ///////////////////////////////////////////////////
   // 04. Scroll Up Js
   if ($(".scroll-to-target").length) {
@@ -113,16 +147,32 @@
       $(".black-logo").show();
     }
     
-    // Additional mobile header fixes
+    // Additional mobile header fixes: overlay hero when not sticky
     if (window.innerWidth <= 767) {
       var headerElement = document.getElementById("header-sticky");
-      if (headerElement) {
+      var headerWrapper = document.querySelector(".tp-header-height");
+      if (headerElement && headerWrapper) {
         if (scroll < 400) {
-          headerElement.style.position = "relative";
+          // Non-sticky: overlay hero, no spacer height
+          headerElement.style.position = "absolute";
+          headerElement.style.top = "0";
+          headerElement.style.left = "0";
+          headerElement.style.right = "0";
           headerElement.style.zIndex = "1000";
+          headerElement.style.backgroundColor = "transparent";
+          headerWrapper.style.height = "0px";
+          headerWrapper.style.padding = "0";
+          headerWrapper.style.backgroundColor = "transparent";
         } else {
+          // Sticky: fixed with spacer equal to current header height
           headerElement.style.position = "fixed";
+          headerElement.style.top = "0";
+          headerElement.style.left = "0";
+          headerElement.style.right = "0";
           headerElement.style.zIndex = "9999";
+          var h = headerElement.offsetHeight || 0;
+          headerWrapper.style.height = h + "px";
+          headerWrapper.style.padding = "0";
         }
       }
     }

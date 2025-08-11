@@ -18391,3 +18391,23 @@ input[type="color"] {
     color: var(--tp-common-black) !important;
   }
 }
+
+/* Mobile header background fix – ensure transparent when not sticky, white when sticky (phones only) */
+@media (max-width: 767px) {
+  /* Non-sticky state: fully transparent */
+  #header-sticky,
+  .header-sticky-bg-2,
+  .tp-header-2__transparent,
+  .tp-header-2__plr {
+    background-color: transparent !important;
+    box-shadow: none !important;
+  }
+
+  /* Sticky state: white background */
+  #header-sticky.header-sticky,
+  .header-sticky-bg-2.header-sticky {
+    background-color: var(--tp-common-white) !important;
+  }
+
+  /* Do not alter menu container backgrounds here; only header transparency handled */
+}
