@@ -18311,13 +18311,11 @@ input[type="color"] {
     }
     
     /* Fix navigation menu positioning */
-    /* .navMenu {
+    .navMenu {
       backdrop-filter: blur(15px);
       -webkit-backdrop-filter: blur(15px);
       z-index: 10000 !important;
-      right: 10px !important;
-      left: auto !important;
-    } */
+    }
     
     /* Ensure video background doesn't interfere */
     .video-background {
@@ -18419,6 +18417,26 @@ input[type="color"] {
   }
 
   /* Do not alter menu container backgrounds here; only header transparency handled */
+  .ab-brand-border-bottom {
+    padding-bottom: 0 !important;
+  }
+  .about-bg-main {
+    background-position: right;
+  }
+  .tp-payment-method__main-img {
+    width: 50% !important;
+    height: 50% !important;
+  }
+  .allRoundImg {
+    width: 50px !important;
+    height: 50px !important;
+  }
+  .tp-service-area {
+    padding-bottom: 30px !important;
+  }
+  .tp-service-2__area {
+    padding-bottom: 90px !important;
+  }
 }
 
 /* Service menu arrow styling */
