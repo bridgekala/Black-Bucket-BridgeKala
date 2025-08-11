@@ -18265,17 +18265,3 @@ input[type="color"] {
       border-bottom: none;
     }
 }
-.tp-header-2__area {
-  position: relative;
-  z-index: 9999; /* High value so it stays above other content */
-}
-
-#navMenu {
-  z-index: 99999; /* Ensure dropdown menu stays on top */
-  position: absolute;
-}
-#header-sticky {
-  position: sticky; /* or fixed depending on behavior */
-  top: 0;
-  z-index: 9999;
-}
