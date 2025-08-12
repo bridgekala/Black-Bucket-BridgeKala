@@ -3380,6 +3380,7 @@ input[type="color"] {
   .tp-section-title {
     font-size: 33px;
     text-align: center;
+    width: 382px !important;
   }
 }
 
