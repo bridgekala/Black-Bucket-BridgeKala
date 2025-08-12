@@ -18540,3 +18540,41 @@ input[type="color"] {
 #navMenu #installCont .installbtn div {
   color: #04580f !important; /* same as .navMenu a div color */
 }
+
+@media (max-width: 767px) {
+  .tptp{
+    padding-top: 0 !important;
+    margin-bottom: 0 !important;
+  }
+  .tp-feature__item {
+    background: #ffffff;
+    box-shadow: 0px 1px 3px rgba(18, 20, 32, 0.2);
+    border-radius: 30px;
+    padding: 29px 40px 0 40px;
+    transition: 0.3s;
+    height: 97px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 27px;
+}
+.tp-account-area{
+  padding-bottom: 0 !important;
+}
+.PictureReverse{
+  flex-direction: column-reverse;
+}
+.mbmb{
+  margin-bottom: 0 !important;
+}
+.testi{
+  text-align: center !important;
+}
+.testArrow{
+  justify-content: center !important;
+}
+.tp-faq-area{
+  padding-top: 30px !important;
+  padding-bottom: 47px !important;
+}
+}
