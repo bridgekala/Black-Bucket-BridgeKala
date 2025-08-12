@@ -18577,4 +18577,14 @@ input[type="color"] {
   padding-top: 30px !important;
   padding-bottom: 47px !important;
 }
+
+.tp-service-sm-item {
+    border: 1px solid #e9ebf1;
+    border-radius: 20px;
+    padding: 45px;
+    min-height: 205px;
+    overflow: hidden;
+    transition: 0.3s;
+    gap: 13px;
+}
 }
