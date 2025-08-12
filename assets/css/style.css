@@ -3927,16 +3927,16 @@ input[type="color"] {
   top: 0;
   left: 0;
   right: 0;
-      background-color: var(--tp-common-white) !important;
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
+  background-color: var(--tp-common-white) !important;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   opacity: 1;
   visibility: visible;
   width: 100%;
-      box-shadow: 0px 4px 10px rgba(3, 4, 28, 0.2);
+  box-shadow: 0px 4px 10px rgba(3, 4, 28, 0.2);
   animation: 600ms ease-in-out 0s normal none 1 running fadeInDown;
-      z-index: 9999 !important;
-    }
+  z-index: 9999 !important;
+}
 /* Logo display will be controlled by JavaScript */
 .header-sticky-bg-2.header-sticky .header-bottom__main-menu-inner ul li a {
   color: var(--tp-common-black);
@@ -17620,7 +17620,7 @@ input[type="color"] {
 .video-background {
   position: relative;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   overflow: hidden;
 }
 
@@ -17632,7 +17632,21 @@ input[type="color"] {
   min-height: 100%;
   transform: translate(-50%, -50%);
   z-index: -1;
-  object-fit: cover;
+  object-fit: contain;
+}
+
+/* Mobile responsive video background - only for 767px and below */
+@media (max-width: 767px) {
+  .video-background {
+    height: 28vh;
+  }
+
+  .video-background video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+  }
 }
 
 /* Ensures content is layered above video */
@@ -17656,8 +17670,9 @@ input[type="color"] {
 /* new bg three section */
 .video-section {
   position: relative;
-  /* height: ; Adjust height as needed */
+  height: auto;
   overflow: hidden;
+  margin-top: 0;
 }
 
 .video-bg {
@@ -18183,8 +18198,8 @@ input[type="color"] {
     font-size: 1rem;
   }
   .counter-area-flex {
-    margin-top: 100px;
-    padding-bottom: 100px;
+    margin-top: 6px;
+    padding-bottom: 30px;
   }
 
   .tp-service-2__user span {
@@ -18255,87 +18270,93 @@ input[type="color"] {
     font-size: 12px;
   }
 
-    .stat:not(:last-child)::after {
-        height: 30px;
-        width: 1px;
-    }
-    
-    /* Fix mobile header issues */
-    .tp-header-height{
-      background-color: transparent !important;
-      position: relative;
-      z-index: 1000;
-    }
-    
-    .header-sticky-bg-2 {
-      background-color: transparent !important;
-      position: relative;
-      z-index: 1000;
-    }
-    
-    .header-sticky-bg-2.header-sticky {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      background-color: var(--tp-common-white) !important;
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
-      opacity: 1;
-      visibility: visible;
-      width: 100%;
-      box-shadow: 0px 4px 10px rgba(3, 4, 28, 0.2);
-      animation: 600ms ease-in-out 0s normal none 1 running fadeInDown;
-      z-index: 9999 !important;
-    }
-    
-    .header-sticky-bg-2.header-sticky .tp-header-2__main-menu > nav > ul > li > a {
-      color: var(--tp-common-black);
-      padding: 20px 0;
-    }
-    
-    .header-sticky-bg-2.header-sticky .tp-header-2__right .tp-header-2__login {
-      color: var(--tp-common-black);
-    }
-    
-    .header-sticky-bg-2.header-sticky .tp-header-2__right .tp-header-2__login:hover {
-      color: var(--tp-theme-2);
-    }
-    
-    /* Logo display will be controlled by JavaScript */
-    
-    /* Ensure mainheader stays on top */
-    .mainheader {
-      position: relative;
-      z-index: 1001;
-    }
-    
-    /* Fix navigation menu positioning */
-    .navMenu {
-      backdrop-filter: blur(15px);
-      -webkit-backdrop-filter: blur(15px);
-      z-index: 10000 !important;
-    }
-    
-    /* Ensure video background doesn't interfere */
-    .video-background {
-      z-index: 1;
-    }
-    
-    .video-background .content {
-      z-index: 2;
-    }
-    
-    /* Fix any potential white background from other elements */
-    .tp-header-2__transparent {
-      background-color: transparent !important;
-    }
-    
-    .tp-header-2__plr {
-      background-color: transparent !important;
-    }
-}
+  .stat:not(:last-child)::after {
+    height: 30px;
+    width: 1px;
+  }
 
+  /* Fix mobile header issues */
+  .tp-header-height {
+    background-color: transparent !important;
+    position: relative;
+    z-index: 1000;
+  }
+
+  .header-sticky-bg-2 {
+    background-color: transparent !important;
+    position: relative;
+    z-index: 1000;
+  }
+
+  .header-sticky-bg-2.header-sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--tp-common-white) !important;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    opacity: 1;
+    visibility: visible;
+    width: 100%;
+    box-shadow: 0px 4px 10px rgba(3, 4, 28, 0.2);
+    animation: 600ms ease-in-out 0s normal none 1 running fadeInDown;
+    z-index: 9999 !important;
+  }
+
+  .header-sticky-bg-2.header-sticky
+    .tp-header-2__main-menu
+    > nav
+    > ul
+    > li
+    > a {
+    color: var(--tp-common-black);
+    padding: 20px 0;
+  }
+
+  .header-sticky-bg-2.header-sticky .tp-header-2__right .tp-header-2__login {
+    color: var(--tp-common-black);
+  }
+
+  .header-sticky-bg-2.header-sticky
+    .tp-header-2__right
+    .tp-header-2__login:hover {
+    color: var(--tp-theme-2);
+  }
+
+  /* Logo display will be controlled by JavaScript */
+
+  /* Ensure mainheader stays on top */
+  .mainheader {
+    position: relative;
+    z-index: 1001;
+  }
+
+  /* Fix navigation menu positioning */
+  .navMenu {
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    z-index: 10000 !important;
+  }
+
+  /* Ensure video background doesn't interfere */
+  .video-background {
+    z-index: 1;
+  }
+
+  .video-background .content {
+    z-index: 2;
+  }
+
+  /* Fix any potential white background from other elements */
+  .tp-header-2__transparent {
+    background-color: transparent !important;
+  }
+
+  .tp-header-2__plr {
+    background-color: transparent !important;
+  }
+}
 
 /* Additional global header fixes for all screen sizes */
 .tp-header-height {
@@ -18471,8 +18492,7 @@ input[type="color"] {
 
 /* Show arrows only on mobile */
 @media (max-width: 767px) {
-
-  .mainheader{
+  .mainheader {
     gap: 150px;
   }
 
@@ -18481,24 +18501,23 @@ input[type="color"] {
     display: inline-block;
   }
 
-
   /* Keep arrows close to text for Service & Download items */
   #navMenu #serviceCont a div,
   #navMenu #installCont a div {
-  width: auto !important;
-  margin-right: 2px !important;
-  padding-right: 0 !important;
-  display: inline-flex;
-  align-items: center;
-  gap: 2px;
+    width: auto !important;
+    margin-right: 2px !important;
+    padding-right: 0 !important;
+    display: inline-flex;
+    align-items: center;
+    gap: 2px;
   }
   .service-arrow,
   .install-arrow {
-  margin-left: 2px !important;
-  width: 30px !important;
-  height: 30px !important;
-  vertical-align: middle;
-  padding: 0 !important;
+    margin-left: 2px !important;
+    width: 30px !important;
+    height: 30px !important;
+    vertical-align: middle;
+    padding: 0 !important;
   }
 }
 
