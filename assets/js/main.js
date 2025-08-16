@@ -146,7 +146,7 @@
       $(".white-logo").hide();
       $(".black-logo").show();
     }
-    
+
     // Additional mobile header fixes: overlay hero when not sticky
     if (window.innerWidth <= 767) {
       var headerElement = document.getElementById("header-sticky");
@@ -1404,14 +1404,14 @@ navLinks.forEach((link) => {
   }
 });
 
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener("DOMContentLoaded", function () {
   // --- base elements ---
-  const navIcon = document.getElementById('navIcon');
-  const navMenu = document.getElementById('navMenu');
-  const navLinks = navMenu ? navMenu.querySelectorAll('a') : [];
-  const menuItems = document.querySelectorAll('#navMenu a div');
-  const mainCont = document.querySelector('.mainCont');
-  let activeItem = document.querySelector('#navMenu a div.active');
+  const navIcon = document.getElementById("navIcon");
+  const navMenu = document.getElementById("navMenu");
+  const navLinks = navMenu ? navMenu.querySelectorAll("a") : [];
+  const menuItems = document.querySelectorAll("#navMenu a div");
+  const mainCont = document.querySelector(".mainCont");
+  let activeItem = document.querySelector("#navMenu a div.active");
 
   let isMenuOpen = false;
   let isHoveringNavMenu = false;
@@ -1420,117 +1420,176 @@ document.addEventListener('DOMContentLoaded', function () {
   // safe show/hide menu
   function showMenu() {
     if (!navMenu) return;
-    navMenu.classList.remove('navMenuHide');
+    navMenu.classList.remove("navMenuHide");
     isMenuOpen = true;
     if (mainCont) {
-      mainCont.classList.remove('bounce-down');
+      mainCont.classList.remove("bounce-down");
       void mainCont.offsetHeight;
-      mainCont.classList.add('bounce-down');
+      mainCont.classList.add("bounce-down");
     }
     if (activeItem) {
-      activeItem.classList.remove('active');
+      activeItem.classList.remove("active");
       void activeItem.offsetWidth;
-      activeItem.classList.add('active');
+      activeItem.classList.add("active");
     }
   }
   function hideMenu() {
     if (!navMenu) return;
-    navMenu.classList.add('navMenuHide');
+    navMenu.classList.add("navMenuHide");
     isMenuOpen = false;
   }
 
   // navIcon toggle
   if (navIcon) {
-    navIcon.addEventListener('click', () => (isMenuOpen ? hideMenu() : showMenu()));
+    navIcon.addEventListener("click", () =>
+      isMenuOpen ? hideMenu() : showMenu()
+    );
   }
 
   // hide on nav link click if normal link (don't auto-close if it has a submenu)
   navLinks.forEach((link) => {
-    link.addEventListener('click', () => {
+    link.addEventListener("click", () => {
       const parent = link.parentElement;
-      const hasSub = parent && parent.querySelector('ul');
+      const hasSub = parent && parent.querySelector("ul");
       if (!hasSub) hideMenu();
     });
   });
 
   // active item click
   menuItems.forEach((item) => {
-    item.addEventListener('click', () => {
-      menuItems.forEach((el) => el.classList.remove('active'));
-      item.classList.add('active');
+    item.addEventListener("click", () => {
+      menuItems.forEach((el) => el.classList.remove("active"));
+      item.classList.add("active");
       activeItem = item;
     });
   });
 
   // default active
   if (!activeItem) {
-    const first = document.querySelector('#navMenu a div');
+    const first = document.querySelector("#navMenu a div");
     if (first) {
-      first.classList.add('active');
+      first.classList.add("active");
       activeItem = first;
     }
   }
 
   // set active from URL
   (function setActiveFromPath() {
-    const currentPath = window.location.pathname.split('/').pop();
-    const navLinksAll = document.querySelectorAll('#navMenu a');
+    const currentPath = window.location.pathname.split("/").pop();
+    const navLinksAll = document.querySelectorAll("#navMenu a");
     let found = false;
     navLinksAll.forEach((link) => {
-      const linkPath = link.getAttribute('href');
-      const menuItem = link.querySelector('div');
-      if (linkPath === currentPath || (currentPath === '' && linkPath === 'index.html')) {
-        if (menuItem) { menuItem.classList.add('active'); activeItem = menuItem; found = true; }
+      const linkPath = link.getAttribute("href");
+      const menuItem = link.querySelector("div");
+      if (
+        linkPath === currentPath ||
+        (currentPath === "" && linkPath === "index.html")
+      ) {
+        if (menuItem) {
+          menuItem.classList.add("active");
+          activeItem = menuItem;
+          found = true;
+        }
       } else {
-        if (menuItem) menuItem.classList.remove('active');
+        if (menuItem) menuItem.classList.remove("active");
       }
     });
     if (!found) {
-      const firstItem = document.querySelector('#navMenu a div');
-      if (firstItem) { firstItem.classList.add('active'); activeItem = firstItem; }
+      const firstItem = document.querySelector("#navMenu a div");
+      if (firstItem) {
+        firstItem.classList.add("active");
+        activeItem = firstItem;
+      }
     }
   })();
 
   // --- submenu elements (safe fallbacks) ---
-  const serviceCont = document.getElementById('serviceCont');
-  const installCont = document.getElementById('installCont');
-  const serviceNavSubmenu = document.getElementById('serviceNavSubmenu');
-  const installNavSubmenu = document.getElementById('installNavSubmenu');
-  const servicebtn = document.getElementById('servicebtn') || (serviceCont && serviceCont.querySelector('a'));
-  const installbtn = document.getElementById('installbtn') || (installCont && installCont.querySelector('a.installbtn'));
+  const serviceCont = document.getElementById("serviceCont");
+  const installCont = document.getElementById("installCont");
+  const serviceNavSubmenu = document.getElementById("serviceNavSubmenu");
+  const installNavSubmenu = document.getElementById("installNavSubmenu");
+  const servicebtn =
+    document.getElementById("servicebtn") ||
+    (serviceCont && serviceCont.querySelector("a"));
+  const installbtn =
+    document.getElementById("installbtn") ||
+    (installCont && installCont.querySelector("a.installbtn"));
 
   // helper submenu toggles
-  function openSubmenu(sub) { if (!sub) return; sub.classList.remove('navSubmenuHide'); sub.classList.add('navSubmenu'); wasSubmenuOpened = true; }
-  function closeSubmenu(sub) { if (!sub) return; sub.classList.remove('navSubmenu'); sub.classList.add('navSubmenuHide'); }
-  function toggleSubmenu(sub) { if (!sub) return; if (sub.classList.contains('navSubmenu')) closeSubmenu(sub); else openSubmenu(sub); }
+  function openSubmenu(sub) {
+    if (!sub) return;
+    sub.classList.remove("navSubmenuHide");
+    sub.classList.add("navSubmenu");
+    wasSubmenuOpened = true;
+  }
+  function closeSubmenu(sub) {
+    if (!sub) return;
+    sub.classList.remove("navSubmenu");
+    sub.classList.add("navSubmenuHide");
+  }
+  function toggleSubmenu(sub) {
+    if (!sub) return;
+    if (sub.classList.contains("navSubmenu")) closeSubmenu(sub);
+    else openSubmenu(sub);
+  }
 
   // detect hover-capable devices
-  const supportsHover = () => window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+  const supportsHover = () =>
+    window.matchMedia("(hover: hover) and (pointer: fine)").matches;
 
   // desktop hover handlers (named so we can remove them)
-  function serviceEnter() { openSubmenu(serviceNavSubmenu); }
-  function serviceLeave() { closeSubmenu(serviceNavSubmenu); }
-  function installEnter() { openSubmenu(installNavSubmenu); }
-  function installLeave() { closeSubmenu(installNavSubmenu); }
+  function serviceEnter() {
+    openSubmenu(serviceNavSubmenu);
+  }
+  function serviceLeave() {
+    closeSubmenu(serviceNavSubmenu);
+  }
+  function installEnter() {
+    openSubmenu(installNavSubmenu);
+  }
+  function installLeave() {
+    closeSubmenu(installNavSubmenu);
+  }
 
   function addDesktopHover() {
-    if (serviceCont) { serviceCont.addEventListener('mouseenter', serviceEnter); serviceCont.addEventListener('mouseleave', serviceLeave); }
-    if (installCont) { installCont.addEventListener('mouseenter', installEnter); installCont.addEventListener('mouseleave', installLeave); }
+    if (serviceCont) {
+      serviceCont.addEventListener("mouseenter", serviceEnter);
+      serviceCont.addEventListener("mouseleave", serviceLeave);
+    }
+    if (installCont) {
+      installCont.addEventListener("mouseenter", installEnter);
+      installCont.addEventListener("mouseleave", installLeave);
+    }
     if (navMenu) {
-      navMenu.addEventListener('mouseenter', () => { isHoveringNavMenu = true; });
-      navMenu.addEventListener('mouseleave', () => {
+      navMenu.addEventListener("mouseenter", () => {
+        isHoveringNavMenu = true;
+      });
+      navMenu.addEventListener("mouseleave", () => {
         isHoveringNavMenu = false;
         setTimeout(() => {
-          const sHidden = serviceNavSubmenu ? serviceNavSubmenu.classList.contains('navSubmenuHide') : true;
-          const iHidden = installNavSubmenu ? installNavSubmenu.classList.contains('navSubmenuHide') : true;
-          if (!isHoveringNavMenu && sHidden && iHidden) { hideMenu(); wasSubmenuOpened = false; }
+          const sHidden = serviceNavSubmenu
+            ? serviceNavSubmenu.classList.contains("navSubmenuHide")
+            : true;
+          const iHidden = installNavSubmenu
+            ? installNavSubmenu.classList.contains("navSubmenuHide")
+            : true;
+          if (!isHoveringNavMenu && sHidden && iHidden) {
+            hideMenu();
+            wasSubmenuOpened = false;
+          }
         }, 1100);
       });
     }
   }
   function removeDesktopHover() {
-    if (serviceCont) { serviceCont.removeEventListener('mouseenter', serviceEnter); serviceCont.removeEventListener('mouseleave', serviceLeave); }
-    if (installCont) { installCont.removeEventListener('mouseenter', installEnter); installCont.removeEventListener('mouseleave', installLeave); }
+    if (serviceCont) {
+      serviceCont.removeEventListener("mouseenter", serviceEnter);
+      serviceCont.removeEventListener("mouseleave", serviceLeave);
+    }
+    if (installCont) {
+      installCont.removeEventListener("mouseenter", installEnter);
+      installCont.removeEventListener("mouseleave", installLeave);
+    }
     // navMenu listeners are anonymous in addDesktopHover so they can't be removed here — but it's ok because desktop mode won't re-add them repeatedly.
   }
 
@@ -1555,10 +1614,10 @@ document.addEventListener('DOMContentLoaded', function () {
   }
   function addMobileClicks() {
     // Only use outside click to close; links should navigate normally.
-    document.addEventListener('click', outsideClick);
+    document.addEventListener("click", outsideClick);
   }
   function removeMobileClicks() {
-    document.removeEventListener('click', outsideClick);
+    document.removeEventListener("click", outsideClick);
   }
 
   // set mode depending on hover support
@@ -1575,75 +1634,137 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // watch for pointer/hover capability changes (rotate / attach mouse)
   try {
-    const mq = window.matchMedia('(hover: hover) and (pointer: fine)');
-    mq.addEventListener('change', setupSubmenuMode);
+    const mq = window.matchMedia("(hover: hover) and (pointer: fine)");
+    mq.addEventListener("change", setupSubmenuMode);
   } catch (err) {
-    window.addEventListener('resize', setupSubmenuMode);
+    window.addEventListener("resize", setupSubmenuMode);
   }
 
   // small mobile-specific toggles (if those elements exist in your DOM)
-  const btnToggleMenu = document.getElementById('btnToggleMenu');
-  const navPanel = document.getElementById('panelMainMenu');
-  if (btnToggleMenu && navPanel) btnToggleMenu.addEventListener('click', () => navPanel.classList.toggle('active'));
+  const btnToggleMenu = document.getElementById("btnToggleMenu");
+  const navPanel = document.getElementById("panelMainMenu");
+  if (btnToggleMenu && navPanel)
+    btnToggleMenu.addEventListener("click", () =>
+      navPanel.classList.toggle("active")
+    );
 
-  const btnToggleServices = document.getElementById('btnToggleServices');
-  const submenuServices = document.getElementById('submenuServices');
-  if (btnToggleServices && submenuServices) btnToggleServices.addEventListener('click', (e) => { e.preventDefault(); submenuServices.classList.toggle('active'); });
+  const btnToggleServices = document.getElementById("btnToggleServices");
+  const submenuServices = document.getElementById("submenuServices");
+  if (btnToggleServices && submenuServices)
+    btnToggleServices.addEventListener("click", (e) => {
+      e.preventDefault();
+      submenuServices.classList.toggle("active");
+    });
 
-  const btnToggleDownloads = document.getElementById('btnToggleDownloads');
-  const submenuDownloads = document.getElementById('submenuDownloads');
-  if (btnToggleDownloads && submenuDownloads) btnToggleDownloads.addEventListener('click', (e) => { e.preventDefault(); submenuDownloads.classList.toggle('active'); });
+  const btnToggleDownloads = document.getElementById("btnToggleDownloads");
+  const submenuDownloads = document.getElementById("submenuDownloads");
+  if (btnToggleDownloads && submenuDownloads)
+    btnToggleDownloads.addEventListener("click", (e) => {
+      e.preventDefault();
+      submenuDownloads.classList.toggle("active");
+    });
 
   // scroll-to section (kept safe)
-  const scrollLink = document.querySelector('.tp-hero-2__mouse-scroll a');
+  const scrollLink = document.querySelector(".tp-hero-2__mouse-scroll a");
   if (scrollLink) {
-    scrollLink.addEventListener('click', function (e) {
+    scrollLink.addEventListener("click", function (e) {
       e.preventDefault();
-      const targetSection = document.querySelector('.tp-account-area');
-      if (targetSection) window.scrollTo({ top: targetSection.offsetTop, behavior: 'smooth' });
+      const targetSection = document.querySelector(".tp-account-area");
+      if (targetSection)
+        window.scrollTo({ top: targetSection.offsetTop, behavior: "smooth" });
     });
   }
 
   // swap logos (safe checks)
   function swapLogos() {
-    const whiteLogo = document.querySelector('.white-logo img');
-    const blackLogo = document.querySelector('.black-logo img');
+    const whiteLogo = document.querySelector(".white-logo img");
+    const blackLogo = document.querySelector(".black-logo img");
     if (!whiteLogo || !blackLogo) return;
     if (window.innerWidth <= 767) {
-      whiteLogo.src = 'assets/img/logo/mob1.png';
-      blackLogo.src = 'assets/img/logo/mob2.png';
+      whiteLogo.src = "assets/img/logo/mob1.png";
+      blackLogo.src = "assets/img/logo/mob2.png";
     } else {
-      whiteLogo.src = 'assets/img/logo/2.png';
-      blackLogo.src = 'assets/img/logo/1.png';
+      whiteLogo.src = "assets/img/logo/2.png";
+      blackLogo.src = "assets/img/logo/1.png";
     }
   }
   swapLogos();
-  window.addEventListener('resize', swapLogos);
+  window.addEventListener("resize", swapLogos);
 
   // --- Service arrow dropdown toggle ---
-  const serviceArrow = serviceCont && serviceCont.querySelector('.service-arrow');
+  const serviceArrow =
+    serviceCont && serviceCont.querySelector(".service-arrow");
   if (serviceArrow && serviceNavSubmenu) {
-    serviceArrow.addEventListener('click', function(e) {
+    serviceArrow.addEventListener("click", function (e) {
       e.stopPropagation();
       toggleSubmenu(serviceNavSubmenu);
-      serviceArrow.classList.toggle('open');
+      serviceArrow.classList.toggle("open");
     });
   }
   // Ensure clicking Service link navigates (no preventDefault anywhere)
   if (servicebtn) {
-    servicebtn.addEventListener('click', function(e){ /* allow default navigation */ });
+    servicebtn.addEventListener("click", function (e) {
+      /* allow default navigation */
+    });
   }
 
   // --- Download App arrow dropdown toggle ---
-  const installArrow = installCont && installCont.querySelector('.install-arrow');
+  const installArrow =
+    installCont && installCont.querySelector(".install-arrow");
   if (installArrow && installNavSubmenu) {
-    installArrow.addEventListener('click', function(e) {
+    installArrow.addEventListener("click", function (e) {
       e.stopPropagation();
       toggleSubmenu(installNavSubmenu);
-      installArrow.classList.toggle('open');
+      installArrow.classList.toggle("open");
     });
   }
   if (installbtn) {
-    installbtn.addEventListener('click', function(e){ /* allow default navigation */ });
+    installbtn.addEventListener("click", function (e) {
+      /* allow default navigation */
+    });
   }
 });
+
+// slider Script
+const track = document.getElementById("carousel-track");
+let slides = Array.from(track.children);
+
+const captions = [
+  "Boat Ride",
+  "Mountains",
+  "Lavender Field",
+  "Blue Man",
+  "Galaxy Face",
+];
+const subcaptions = ["Travel", "Nature", "Photography", "Art", "Portrait"];
+
+let currentIndex = 0;
+
+function updateActive() {
+  slides.forEach((slide, idx) => {
+    slide.classList.toggle("active", idx === Math.floor(slides.length / 2));
+  });
+  // The center slide is always at Math.floor(slides.length / 2)
+  const centerIndex =
+    (currentIndex + Math.floor(slides.length / 2)) % slides.length;
+  document.getElementById("caption").textContent = captions[centerIndex];
+  document.getElementById("subcaption").textContent = subcaptions[centerIndex];
+}
+
+function nextSlide() {
+  // Move first slide to end, increment index
+  track.appendChild(slides[0]);
+  currentIndex = (currentIndex + 1) % slides.length;
+  slides = Array.from(track.children);
+  updateActive();
+}
+
+function prevSlide() {
+  // Move last slide to start, decrement index
+  track.insertBefore(slides[slides.length - 1], slides[0]);
+  currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+  slides = Array.from(track.children);
+  updateActive();
+}
+
+updateActive();

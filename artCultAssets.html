@@ -102,7 +102,7 @@
     <div class="body-overlay"></div>
     <!-- tp-offcanvus-area-end -->
 
-   <!-- tp-header-area-start -->
+    <!-- tp-header-area-start -->
     <header class="tp-header-height">
       <div
         id="header-sticky"
@@ -134,13 +134,13 @@
                     <div>About</div>
                   </a>
                   <div id="serviceCont">
-                    <div style="display: flex; align-items: center;">
+                    <div style="display: flex; align-items: center">
                       <a id="servicebtn" href="service.html"
                         ><div>Service</div></a
                       >
 
                       <img
-                        style="width: 37px;"
+                        style="width: 37px"
                         class="service-arrow"
                         src="assets/img/downArrow.png"
                         alt=""
@@ -315,6 +315,42 @@
 
           <!-- service-details-area-start -->
           <div class="sv-details-area sv-details-space pt-100 pb-100">
+            <!-- slider -->
+            <div class="carousel-container">
+              <button class="arrow left" onclick="prevSlide()">&#10094;</button>
+              <div class="carousel-track" id="carousel-track">
+                <div class="slide">
+                  <img src="https://picsum.photos/id/1011/300/300" />
+                </div>
+                <div class="slide">
+                  <img src="https://picsum.photos/id/1015/300/300" />
+                </div>
+                <div class="slide">
+                  <img src="https://picsum.photos/id/1016/300/300" />
+                </div>
+                <div class="slide">
+                  <img src="https://picsum.photos/id/1018/300/300" />
+                </div>
+                <div class="slide">
+                  <img src="https://picsum.photos/id/1024/300/300" />
+                </div>
+              </div>
+              <button class="arrow right" onclick="nextSlide()">
+                &#10095;
+              </button>
+            </div>
+            <div
+              style="
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                margin-bottom: 30px;
+              "
+            >
+              <div class="caption" id="caption">Nature</div>
+              <div class="subcaption" id="subcaption">Photography</div>
+            </div>
             <div class="container">
               <div class="row">
                 <div class="col-xl-8 col-lg-8">
@@ -515,6 +551,75 @@
             </div>
           </div>
           <!-- service-details-area-end -->
+
+          <!-- Art & Culture Assets Grid Start -->
+          <!-- <div class="container art-culture-grid">
+            <div
+              class="row row-cols-2 row-cols-sm-3 row-cols-md-5 g-4 justify-content-center"
+            >
+              <div class="col d-flex">
+                <div class="art-culture-item w-100">
+                  <img src="assets/img/about/about-2.jpg" alt="Art 1" />
+                  <div class="caption">Caption 1</div>
+                </div>
+              </div>
+              <div class="col d-flex">
+                <div class="art-culture-item w-100">
+                  <img src="assets/img/about/about-2.jpg" alt="Art 2" />
+                  <div class="caption">Caption 2</div>
+                </div>
+              </div>
+              <div class="col d-flex">
+                <div class="art-culture-item w-100">
+                  <img src="assets/img/about/about-2.jpg" alt="Art 3" />
+                  <div class="caption"> Caption 3</div>
+                </div>
+              </div>
+              <div class="col d-flex">
+                <div class="art-culture-item w-100">
+                  <img src="assets/img/about/about-2.jpg" alt="Art 4" />
+                  <div class="caption"> Caption 4</div>
+                </div>
+              </div>
+              <div class="col d-flex">
+                <div class="art-culture-item w-100">
+                  <img src="assets/img/about/about-2.jpg" alt="Art 5" />
+                  <div class="caption"> Caption 5</div>
+                </div>
+              </div>
+              <div class="col d-flex">
+                <div class="art-culture-item w-100">
+                  <img src="assets/img/about/about-2.jpg" alt="Art 6" />
+                  <div class="caption"> Caption 6</div>
+                </div>
+              </div>
+              <div class="col d-flex">
+                <div class="art-culture-item w-100">
+                  <img src="assets/img/about/about-2.jpg" alt="Art 7" />
+                  <div class="caption"> Caption 7</div>
+                </div>
+              </div>
+              <div class="col d-flex">
+                <div class="art-culture-item w-100">
+                  <img src="assets/img/about/about-2.jpg" alt="Art 8" />
+                  <div class="caption"> Caption 8</div>
+                </div>
+              </div>
+              <div class="col d-flex">
+                <div class="art-culture-item w-100">
+                  <img src="assets/img/about/about-2.jpg" alt="Art 9" />
+                  <div class="caption"> Caption 9</div>
+                </div>
+              </div>
+              <div class="col d-flex">
+                <div class="art-culture-item w-100">
+                  <img src="assets/img/about/about-2.jpg" alt="Art 10" />
+                  <div class="caption"> Caption 10</div>
+                </div>
+              </div>
+            </div>
+          </div> -->
+          <!-- Art & Culture Assets Grid End -->
 
           <!-- tp-testimonial-area-start -->
           <div
