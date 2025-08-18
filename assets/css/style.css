@@ -18838,3 +18838,32 @@ input[type="color"] {
   background-color: #051c15;
 }
 
+.MutualfundSubmenu {
+  list-style: none;
+  padding: 15px;
+  background: #1abc34; 
+  border-radius: 12px;
+   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); 
+}
+
+.MutualfundSubmenu li {
+  margin: 8px 0;
+  text-align: center;
+}
+
+.MutualfundSubmenu li a {
+  display: block;
+  padding: 10px 15px;
+  background: #3fd155;   /* lighter green for buttons */
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 20px;   /* pill shape */
+  text-align: left;
+  transition: all 0.3s ease;
+}
+
+.MutualfundSubmenu li a:hover {
+  background: #34c249;   /* darker green on hover */
+  transform: translateX(5px); /* slight movement */
+}
