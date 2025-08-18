@@ -1735,8 +1735,24 @@ const captions = [
   "Lavender Field",
   "Blue Man",
   "Galaxy Face",
+  "Boat Ride",
+  "Mountains",
+  "Lavender Field",
+  "Blue Man",
+  "Galaxy Face",
 ];
-const subcaptions = ["Travel", "Nature", "Photography", "Art", "Portrait"];
+const subcaptions = [
+  "Travel",
+  "Nature",
+  "Photography",
+  "Art",
+  "Portrait",
+  "Travel",
+  "Nature",
+  "Photography",
+  "Art",
+  "Portrait",
+];
 
 let currentIndex = 0;
 

@@ -97,7 +97,7 @@
     <div class="body-overlay"></div>
     <!-- tp-offcanvus-area-end -->
 
-  <!-- tp-header-area-start -->
+    <!-- tp-header-area-start -->
     <header class="tp-header-height">
       <div
         id="header-sticky"
@@ -129,13 +129,13 @@
                     <div>About</div>
                   </a>
                   <div id="serviceCont">
-                    <div style="display: flex; align-items: center;">
+                    <div style="display: flex; align-items: center">
                       <a id="servicebtn" href="service.html"
                         ><div>Service</div></a
                       >
 
                       <img
-                        style="width: 37px;"
+                        style="width: 37px"
                         class="service-arrow"
                         src="assets/img/downArrow.png"
                         alt=""
@@ -313,6 +313,46 @@
 
           <!-- service-details-area-start -->
           <div class="sv-details-area sv-details-space pt-100 pb-100">
+            <!-- slider -->
+            <div class="carousel-container">
+              <button class="arrow left" onclick="prevSlide()">&#10094;</button>
+              <div class="carousel-track" id="carousel-track">
+                <div class="slide">
+                  <img src="https://picsum.photos/id/1011/300/300" />
+                </div>
+                <div class="slide">
+                  <img src="https://picsum.photos/id/1015/300/300" />
+                </div>
+                <div class="slide">
+                  <img src="https://picsum.photos/id/1016/300/300" />
+                </div>
+                <div class="slide">
+                  <img src="https://picsum.photos/id/1018/300/300" />
+                </div>
+                <div class="slide">
+                  <img src="https://picsum.photos/id/1024/300/300" />
+                </div>
+                <div class="slide">
+                  <img src="https://picsum.photos/id/1011/300/300" />
+                </div>
+                <div class="slide">
+                  <img src="https://picsum.photos/id/1015/300/300" />
+                </div>
+                <div class="slide">
+                  <img src="https://picsum.photos/id/1016/300/300" />
+                </div>
+                <div class="slide">
+                  <img src="https://picsum.photos/id/1018/300/300" />
+                </div>
+              </div>
+              <button class="arrow right" onclick="nextSlide()">
+                &#10095;
+              </button>
+            </div>
+            <div class="slider-imageInfo">
+              <div class="caption" id="caption">Nature</div>
+              <div class="subcaption" id="subcaption">Photography</div>
+            </div>
             <div class="container">
               <div class="row">
                 <div class="col-xl-8 col-lg-8">
