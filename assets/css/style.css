@@ -3459,7 +3459,7 @@ input[type="color"] {
 }
 @media (max-width: 767px) {
   .tp-section-title-lg {
-    font-size: 25px;
+    font-size: 33px;
     text-align: center;
   }
   .tp-section-title-lg br {
@@ -8364,7 +8364,11 @@ letter-spacing: 2px
 @media (max-width: 767px) {
   .tp-service-2__user {
     padding-left: 0;
-    padding-right: 20px;
+    padding-right: 15px;
+    display: flex;
+    align-items: center;
+    justify-self: center;
+    flex-direction: column;
   }
 }
 .tp-service-2__user span {
@@ -18842,14 +18846,29 @@ letter-spacing: 2px;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgb(125 122 122 / 31%);
-  color: white;
-  font-size: 24px;
+background: rgba(255, 255, 255, 0.85);
+  /* light glass */
+  color: #1a1a1a;
+  font-size: 22px;
   border: none;
-  padding: 10px;
+  padding: 12px 15px;
   cursor: pointer;
   z-index: 10;
   border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  backdrop-filter: blur(6px);
+  /* frosted glass effect */
+}
+
+.arrow:hover {
+  background: rgba(255, 255, 255, 0.8);
+  color: #000;
+  transform: translateY(-50%) scale(1.1);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+.arrow:active {
+  transform: translateY(-50%) scale(0.95);
 }
 
 .arrow.left {
