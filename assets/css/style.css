@@ -565,6 +565,7 @@ input[type="color"] {
   height: 42px;
   line-height: 42px;
   padding: 0 30px;
+  border-radius: 40px;
   font-weight: 600;
   font-size: 15px;
   text-align: center;
@@ -3400,6 +3401,13 @@ input[type="color"] {
   line-height: 1.2;
   letter-spacing: 2px;
 }
+
+.tp-title-anim{
+  color: black;
+    font-family: italiana;
+    letter-spacing: 2px;
+}
+
 .tp-section-title span {
   color: var(--tp-theme-3);
 }
@@ -5679,6 +5687,12 @@ input[type="color"] {
   transform: translateX(-50%);
   bottom: 6px;
   z-index: 5;
+  text-align: center;
+}
+
+.tp-hero-2__mouse-scroll img{
+height: 20px; 
+margin-bottom: 5px
 }
 .tp-hero-2__mouse-scroll span {
   display: block;
@@ -6523,6 +6537,10 @@ input[type="color"] {
   border-radius: 40px;
 }
 
+.tp-account-bg img {
+  width: 90%
+}
+
 @media (max-width: 767px) {
   .tp-account-bg {
     margin-bottom: 60px;
@@ -6545,6 +6563,11 @@ input[type="color"] {
   /* box-shadow: 0px 20px 60px rgba(0, 0, 0, 0.1); */
   border-radius: 100px;
 }
+
+.tp-payment-method__title-box h3{
+letter-spacing: 2px
+}
+
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .tp-payment-method__title-box {
     padding-bottom: 30px;
@@ -8323,6 +8346,9 @@ input[type="color"] {
 .tp-service-2__user {
   padding-left: 54px;
 }
+.tp-service-2__user span {
+  font-size: 25px
+}
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
   .tp-service-2__user {
     padding-left: 40px;
@@ -8440,6 +8466,11 @@ input[type="color"] {
   padding-bottom: 0;
   margin-bottom: 11px;
 }
+
+.tp-service-2__title-sm a{
+line-height: 25px
+}
+
 @media only screen and (min-width: 1200px) and (max-width: 1399px) {
   .tp-service-2__title-sm {
     font-size: 20px;
@@ -10418,6 +10449,11 @@ input[type="color"] {
 .tp-card-title-box {
   padding-left: 70px;
 }
+
+.tp-card-title-box h3{
+letter-spacing: 2px;
+}
+
 @media only screen and (min-width: 1200px) and (max-width: 1399px) {
   .tp-card-title-box {
     padding-left: 50px;
@@ -18866,4 +18902,51 @@ input[type="color"] {
 .MutualfundSubmenu li a:hover {
   background: #34c249;   /* darker green on hover */
   transform: translateX(5px); /* slight movement */
+}
+
+
+.servicecont1{
+  display: flex;
+  align-items: center
+}
+.servicecont1 img{
+  width: 37px;
+}
+
+.installCont1{
+  display: flex;
+    align-items: center
+}
+.installCont1 img{
+ width: 37px;
+}
+
+.line{
+  margin-left: 10px;
+    width: 2px;
+    height: 30px;
+    background-color: rgb(114, 111, 111);
+}
+
+.ring{
+  display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url('assets/video/ring motion.gif');
+    background-size: 90%;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+    width: 100%;
+}
+
+.ring-text{
+  text-align: center;
+    margin-top: 300px;
+    width: 30%
+}
+.ring-text h1{ 
+  color: #098d65;
+    letter-spacing: 2px
 }
