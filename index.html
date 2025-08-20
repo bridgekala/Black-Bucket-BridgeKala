@@ -6,37 +6,90 @@
     <title>Black Bucket Consultants</title>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <!-- Place favicon.ico in the root directory -->
-    <link
-      rel="shortcut icon"
-      type="image/x-icon"
-      href="assets/img/favicon.png"
-    />
-
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.png" />
+  
+    <!-- Google Fonts (single request) -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Italiana&display=swap"
-      rel="stylesheet"
-    />
-    <!-- CSS here -->
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="assets/css/animate.css" />
-    <link rel="stylesheet" href="assets/css/custom-animation.css" />
-    <link rel="stylesheet" href="assets/css/slick.css" />
-    <link rel="stylesheet" href="assets/css/nice-select.css" />
-    <link rel="stylesheet" href="assets/css/flaticon.css" />
-    <link rel="stylesheet" href="assets/css/swiper-bundle.css" />
-    <link rel="stylesheet" href="assets/css/meanmenu.css" />
-    <link rel="stylesheet" href="assets/css/font-awesome-pro.css" />
-    <link rel="stylesheet" href="assets/css/magnific-popup.css" />
-    <link rel="stylesheet" href="assets/css/spacing.css" />
-    <link rel="stylesheet" href="assets/css/style.css" />
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Inter:wght@400;600;700;800&family=Work+Sans:wght@400;600;700&family=Italiana&display=swap"
+      rel="stylesheet" />
+  
+    <!-- Critical CSS: tiny layout helpers only -->
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box
+      }
+  
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif
+      }
+  
+      img {
+        max-width: 100%;
+        height: auto
+      }
+  
+      header {
+        position: sticky;
+        top: 0;
+        z-index: 100
+      }
+  
+      .tp-header-2__area {
+        backdrop-filter: saturate(1.2)
+      }
+  
+      .tp-hero-2__area {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 24px 16px
+      }
+  
+      .video-background,
+      .video-section {
+        position: relative;
+        overflow: hidden
+      }
+  
+      .video-background video,
+      .video-section .video-bg {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover
+      }
+  
+      .tp-section-title-lg,
+      .tp-section-title {
+        font-family: "Cormorant Garamond", serif
+      }
+  
+      .tp-btn-green,
+      .tp-btn-green-sm {
+        border-radius: 40px
+      }
+    </style>
+  
+    <!-- Main stylesheet: preload + swap -->
+    <link rel="preload" href="assets/css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+      <link rel="stylesheet" href="assets/css/style.css">
+    </noscript>
+  
+    <!-- Non-critical vendor CSS print-swap -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="assets/css/animate.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="assets/css/custom-animation.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="assets/css/swiper-bundle.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="assets/css/spacing.css" media="print" onload="this.media='all'">
+    <!-- NOTE: slick, magnific, nice-select, meanmenu, flaticon, font-awesome, tilt/isotope ko tabhi load karenge jab zarurat ho (niche JS se). -->
   </head>
 
   <body>
@@ -1536,7 +1589,7 @@
                               >
                                 <div class="tp-testimonial-five-avata">
                                   <img
-                                    src="assets/img/testimonial/testi-icon-5-4.png"
+                                    src="assets/img/testimonial/testi-icon-5-2.png"
                                     alt=""
                                   />
                                 </div>
@@ -1636,7 +1689,7 @@
                               >
                                 <div class="tp-testimonial-five-avata">
                                   <img
-                                    src="assets/img/testimonial/testi-icon-5-4.png"
+                                    src="assets/img/testimonial/testi-icon-5-2.png"
                                     alt=""
                                   />
                                 </div>
@@ -1666,7 +1719,7 @@
                               >
                                 <div class="tp-testimonial-five-avata">
                                   <img
-                                    src="assets/img/testimonial/testi-icon-5-1.png"
+                                    src="assets/img/testimonial/testi-icon-5-3.png"
                                     alt=""
                                   />
                                 </div>
@@ -1700,7 +1753,7 @@
                               >
                                 <div class="tp-testimonial-five-avata">
                                   <img
-                                    src="assets/img/testimonial/testi-icon-5-1.png"
+                                    src="assets/img/testimonial/testi-icon-5-2.png"
                                     alt=""
                                   />
                                 </div>
@@ -1734,7 +1787,7 @@
                               >
                                 <div class="tp-testimonial-five-avata">
                                   <img
-                                    src="assets/img/testimonial/testi-icon-5-1.png"
+                                    src="assets/img/testimonial/testi-icon-5-3.png"
                                     alt=""
                                   />
                                 </div>
