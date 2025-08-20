@@ -3433,7 +3433,7 @@ input[type="color"] {
   .tp-section-title {
     font-size: 33px;
     text-align: center;
-    width: 382px !important;
+    /* width: 382px !important; */
   }
 }
 
@@ -3553,6 +3553,7 @@ input[type="color"] {
 @media (max-width: 767px) {
   .tp-section-title-5 {
     font-size: 35px;
+    text-align: center;
   }
   .tp-section-title-5 br {
     display: none;
@@ -10500,6 +10501,7 @@ letter-spacing: 2px;
   .tp-card-title-box p {
     font-size: 16px;
     line-height: 25px;
+    text-align: center;
   }
   .tp-card-title-box p br {
     display: none;
@@ -18403,7 +18405,7 @@ letter-spacing: 2px;
     font-weight: 500;
   }
   .counter-container-flex p {
-    font-size: 1rem;
+    font-size: 0.8rem;
   }
   .counter-area-flex {
     margin-top: 30px;
