@@ -1710,8 +1710,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const blackLogo = document.querySelector(".black-logo img");
     if (!whiteLogo || !blackLogo) return;
     if (window.innerWidth <= 767) {
-      whiteLogo.src = "assets/img/logo/mob1.png";
-      blackLogo.src = "assets/img/logo/mob2.png";
+      whiteLogo.src = "assets/img/logo/mobile-1.png";
+      blackLogo.src = "assets/img/logo/mobile-2.png";
     } else {
       whiteLogo.src = "assets/img/logo/2.png";
       blackLogo.src = "assets/img/logo/1.png";
