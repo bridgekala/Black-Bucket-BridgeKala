@@ -253,11 +253,11 @@
           <!-- tp-hero-area-start -->
           <!-- VIDEO BACKGROUND -->
           <div class="video-background">
-            <video autoplay muted loop playsinline>
-              <source
-                src="assets/video/Spare Spin (dark) 1.1.webm"
-                type="video/webm"
-              />
+            <video id="bgVideo" autoplay muted loop playsinline webkit-playsinline preload="metadata"
+              poster="assets/video/spare-spin-poster.jpg">
+              <!-- Put MP4 first for Safari/iOS -->
+              <source src="assets/video/Spare Spin (dark) 1.1.mp4" type="video/mp4">
+              <source src="assets/video/Spare Spin (dark) 1.1.webm" type="video/webm">
               Your browser does not support the video tag.
             </video>
 
@@ -1115,7 +1115,7 @@
 
               <div class="loancard row gx-60">
                 <div
-                  class="col-xl-3 col-lg-3 col-md-6 mb-40 wow tpfadeUp"
+                  class="col-xl-3 col-lg-3 col-md-4 mb-40 wow tpfadeUp"
                   data-wow-duration=".9s"
                   data-wow-delay=".4s"
                 >
@@ -1142,7 +1142,7 @@
                 </div>
 
                 <div
-                  class="col-xl-3 col-lg-3 col-md-6 mb-40 wow tpfadeUp"
+                  class="col-xl-3 col-lg-3 col-md-4 mb-40 wow tpfadeUp"
                   data-wow-duration=".9s"
                   data-wow-delay=".6s"
                 >
@@ -1171,7 +1171,7 @@
                 </div>
 
                 <div
-                  class="col-xl-3 col-lg-3 col-md-6 mb-40 wow tpfadeUp"
+                  class="col-xl-3 col-lg-3 col-md-4 mb-40 wow tpfadeUp"
                   data-wow-duration=".9s"
                   data-wow-delay=".8s"
                 >
@@ -1200,7 +1200,7 @@
                 </div>
 
                 <div
-                  class="col-xl-3 col-lg-3 col-md-6 mb-40 wow tpfadeUp"
+                  class="col-xl-3 col-lg-3 col-md-4 mb-40 wow tpfadeUp"
                   data-wow-duration=".9s"
                   data-wow-delay=".9s"
                 >

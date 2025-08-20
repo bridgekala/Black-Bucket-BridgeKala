@@ -18559,6 +18559,10 @@ letter-spacing: 2px;
     .loancard{
       padding: 25px;
     }
+
+        /* .tp-account-item{
+            justify-content: center;
+        } */
 }
 
 /* Additional global header fixes for all screen sizes */
@@ -18937,7 +18941,7 @@ letter-spacing: 2px;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-image: url('assets/video/ring motion.gif');
+    background-image: url('../video/ring\ motion.gif');
     background-size: 90%;
     background-repeat: no-repeat;
     background-position: center;
