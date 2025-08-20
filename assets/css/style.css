@@ -18555,6 +18555,10 @@ letter-spacing: 2px;
   .tp-header-2__plr {
     background-color: transparent !important;
   }
+
+    .loancard{
+      padding: 25px;
+    }
 }
 
 /* Additional global header fixes for all screen sizes */
