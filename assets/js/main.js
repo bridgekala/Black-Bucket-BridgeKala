@@ -1757,7 +1757,6 @@ document.addEventListener("DOMContentLoaded", function () {
 // slider Script
 const track = document.getElementById("carousel-track");
 let slides = Array.from(track.children);
-
 const captions = [
   "Boat Ride",
   "Mountains",
@@ -1766,9 +1765,6 @@ const captions = [
   "Galaxy Face",
   "Boat Ride",
   "Mountains",
-  "Lavender Field",
-  "Blue Man",
-  "Galaxy Face",
 ];
 const subcaptions = [
   "Travel",
@@ -1778,22 +1774,63 @@ const subcaptions = [
   "Portrait",
   "Travel",
   "Nature",
-  "Photography",
-  "Art",
-  "Portrait",
 ];
-
 let currentIndex = 0;
+let autoSlideInterval = null;
+
+function updateActive() {
+  slides = Array.from(track.children); // in case slides change
+  slides.forEach((slide, idx) => {
+    slide.classList.toggle("active", idx === currentIndex);
+  });
+  // Only update transform for sliding effect, do not touch caption/subcaption
+  track.style.transform = `translateX(-${currentIndex * 100}%)`;
+}
+
+function nextSlide() {
+  currentIndex = (currentIndex + 1) % slides.length;
+  updateActive();
+}
+
+function prevSlide() {
+  currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+  updateActive();
+}
+
+function startAutoSlide() {
+  if (autoSlideInterval) clearInterval(autoSlideInterval);
+  autoSlideInterval = setInterval(() => {
+    nextSlide();
+  }, 2500);
+}
+
+function stopAutoSlide() {
+  if (autoSlideInterval) clearInterval(autoSlideInterval);
+}
+
+// Attach to manual navigation
+document
+  .querySelector(".carousel-container .arrow.left")
+  ?.addEventListener("click", () => {
+    prevSlide();
+    startAutoSlide();
+  });
+document
+  .querySelector(".carousel-container .arrow.right")
+  ?.addEventListener("click", () => {
+    nextSlide();
+    startAutoSlide();
+  });
+
+updateActive();
+startAutoSlide();
 
 function updateActive() {
   slides.forEach((slide, idx) => {
     slide.classList.toggle("active", idx === Math.floor(slides.length / 2));
   });
   // The center slide is always at Math.floor(slides.length / 2)
-  const centerIndex =
-    (currentIndex + Math.floor(slides.length / 2)) % slides.length;
-  document.getElementById("caption").textContent = captions[centerIndex];
-  document.getElementById("subcaption").textContent = subcaptions[centerIndex];
+  // No caption/subcaption update
 }
 
 function nextSlide() {
