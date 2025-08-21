@@ -10492,40 +10492,6 @@ input[type="color"] {
   }
 }
 @media (max-width: 767px) {
-  .video-section {
- position: relative;
-  width: 100%;
-  min-height: 100vh; 
-  overflow: hidden;
-  margin: 0;
-  padding: 0;
-  line-height: 0; /* prevents inline-gap from video */
-}
-
-.video-bg {
-position: absolute;
-  top: 0;
-  left: 0;
-  width: 101%;
-  height: 101%;
-  object-fit: cover;
-  z-index: -1;
-  background: black;
-}
-section {
-  margin: 0;
-  padding: 0;
-}
-
-.video-content {
-  position: relative;
-  z-index: 1;
-  color: white;
-  text-align: center;
-  /* padding-top: 180px; */
-  font-family: sans-serif;
-}
-
   .tp-sales-section-box p {
     font-size: 16px;
     line-height: 25px;
@@ -18900,4 +18866,40 @@ section {
 .MutualfundSubmenu li a:hover {
   background: #34c249;   /* darker green on hover */
   transform: translateX(5px); /* slight movement */
+}
+
+@media (max-width: 1200px)  {
+.video-section {
+ position: relative;
+  width: 100%;
+  min-height: 100vh; 
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  line-height: 0; /* prevents inline-gap from video */
+}
+
+.video-bg {
+position: absolute;
+  top: 0;
+  left: 0;
+  width: 101%;
+  height: 101%;
+  object-fit: cover;
+  z-index: -1;
+  background: black;
+}
+section {
+  margin: 0;
+  padding: 0;
+}
+
+.video-content {
+  position: relative;
+  z-index: 1;
+  color: white;
+  text-align: center;
+  /* padding-top: 180px; */
+  font-family: sans-serif;
+}
 }
