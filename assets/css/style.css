@@ -565,7 +565,6 @@ input[type="color"] {
   height: 42px;
   line-height: 42px;
   padding: 0 30px;
-  border-radius: 40px;
   font-weight: 600;
   font-size: 15px;
   text-align: center;
@@ -2620,11 +2619,6 @@ input[type="color"] {
 .breadcrumb__content {
   margin-top: 60px;
 }
-
-.tp-char-animation h3{
- width: 100%;
-}
-
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .breadcrumb__content {
     transform: translateY(20px);
@@ -3406,13 +3400,6 @@ input[type="color"] {
   line-height: 1.2;
   letter-spacing: 2px;
 }
-
-.tp-title-anim{
-  color: black;
-    font-family: italiana;
-    letter-spacing: 2px;
-}
-
 .tp-section-title span {
   color: var(--tp-theme-3);
 }
@@ -3433,7 +3420,7 @@ input[type="color"] {
   .tp-section-title {
     font-size: 33px;
     text-align: center;
-    /* width: 382px !important; */
+    width: 382px !important;
   }
 }
 
@@ -3464,7 +3451,7 @@ input[type="color"] {
 }
 @media (max-width: 767px) {
   .tp-section-title-lg {
-    font-size: 33px;
+    font-size: 25px;
     text-align: center;
   }
   .tp-section-title-lg br {
@@ -3552,8 +3539,7 @@ input[type="color"] {
 }
 @media (max-width: 767px) {
   .tp-section-title-5 {
-    font-size: 33px;
-    text-align: center;
+    font-size: 35px;
   }
   .tp-section-title-5 br {
     display: none;
@@ -5693,12 +5679,6 @@ input[type="color"] {
   transform: translateX(-50%);
   bottom: 6px;
   z-index: 5;
-  text-align: center;
-}
-
-.tp-hero-2__mouse-scroll img{
-height: 20px; 
-margin-bottom: 5px
 }
 .tp-hero-2__mouse-scroll span {
   display: block;
@@ -6543,10 +6523,6 @@ margin-bottom: 5px
   border-radius: 40px;
 }
 
-.tp-account-bg img {
-  width: 90%
-}
-
 @media (max-width: 767px) {
   .tp-account-bg {
     margin-bottom: 60px;
@@ -6569,11 +6545,6 @@ margin-bottom: 5px
   /* box-shadow: 0px 20px 60px rgba(0, 0, 0, 0.1); */
   border-radius: 100px;
 }
-
-.tp-payment-method__title-box h3{
-letter-spacing: 2px
-}
-
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .tp-payment-method__title-box {
     padding-bottom: 30px;
@@ -8352,9 +8323,6 @@ letter-spacing: 2px
 .tp-service-2__user {
   padding-left: 54px;
 }
-.tp-service-2__user span {
-  font-size: 25px
-}
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
   .tp-service-2__user {
     padding-left: 40px;
@@ -8370,11 +8338,7 @@ letter-spacing: 2px
 @media (max-width: 767px) {
   .tp-service-2__user {
     padding-left: 0;
-    padding-right: 15px;
-    display: flex;
-    align-items: center;
-    justify-self: center;
-    flex-direction: column;
+    padding-right: 20px;
   }
 }
 .tp-service-2__user span {
@@ -8476,11 +8440,6 @@ letter-spacing: 2px
   padding-bottom: 0;
   margin-bottom: 11px;
 }
-
-.tp-service-2__title-sm a{
-line-height: 25px
-}
-
 @media only screen and (min-width: 1200px) and (max-width: 1399px) {
   .tp-service-2__title-sm {
     font-size: 20px;
@@ -10459,11 +10418,6 @@ line-height: 25px
 .tp-card-title-box {
   padding-left: 70px;
 }
-
-.tp-card-title-box h3{
-letter-spacing: 2px;
-}
-
 @media only screen and (min-width: 1200px) and (max-width: 1399px) {
   .tp-card-title-box {
     padding-left: 50px;
@@ -10501,7 +10455,6 @@ letter-spacing: 2px;
   .tp-card-title-box p {
     font-size: 16px;
     line-height: 25px;
-    text-align: center;
   }
   .tp-card-title-box p br {
     display: none;
@@ -10539,6 +10492,40 @@ letter-spacing: 2px;
   }
 }
 @media (max-width: 767px) {
+  .video-section {
+ position: relative;
+  width: 100%;
+  min-height: 100vh; 
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  line-height: 0; /* prevents inline-gap from video */
+}
+
+.video-bg {
+position: absolute;
+  top: 0;
+  left: 0;
+  width: 101%;
+  height: 101%;
+  object-fit: cover;
+  z-index: -1;
+  background: black;
+}
+section {
+  margin: 0;
+  padding: 0;
+}
+
+.video-content {
+  position: relative;
+  z-index: 1;
+  color: white;
+  text-align: center;
+  /* padding-top: 180px; */
+  font-family: sans-serif;
+}
+
   .tp-sales-section-box p {
     font-size: 16px;
     line-height: 25px;
@@ -18405,7 +18392,7 @@ letter-spacing: 2px;
     font-weight: 500;
   }
   .counter-container-flex p {
-    font-size: 0.8rem;
+    font-size: 1rem;
   }
   .counter-area-flex {
     margin-top: 30px;
@@ -18566,14 +18553,6 @@ letter-spacing: 2px;
   .tp-header-2__plr {
     background-color: transparent !important;
   }
-
-    .loancard{
-      padding: 25px;
-    }
-
-        /* .tp-account-item{
-            justify-content: center;
-        } */
 }
 
 /* Additional global header fixes for all screen sizes */
@@ -18853,29 +18832,14 @@ letter-spacing: 2px;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-background: rgba(255, 255, 255, 0.85);
-  /* light glass */
-  color: #1a1a1a;
-  font-size: 22px;
+  background: rgb(125 122 122 / 31%);
+  color: white;
+  font-size: 24px;
   border: none;
-  padding: 12px 15px;
+  padding: 10px;
   cursor: pointer;
   z-index: 10;
   border-radius: 50%;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  transition: all 0.3s ease;
-  backdrop-filter: blur(6px);
-  /* frosted glass effect */
-}
-
-.arrow:hover {
-  background: rgba(255, 255, 255, 0.8);
-  color: #000;
-  transform: translateY(-50%) scale(1.1);
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
-}
-.arrow:active {
-  transform: translateY(-50%) scale(0.95);
 }
 
 .arrow.left {
@@ -18936,51 +18900,4 @@ background: rgba(255, 255, 255, 0.85);
 .MutualfundSubmenu li a:hover {
   background: #34c249;   /* darker green on hover */
   transform: translateX(5px); /* slight movement */
-}
-
-
-.servicecont1{
-  display: flex;
-  align-items: center
-}
-.servicecont1 img{
-  width: 37px;
-}
-
-.installCont1{
-  display: flex;
-    align-items: center
-}
-.installCont1 img{
- width: 37px;
-}
-
-.line{
-  margin-left: 10px;
-    width: 2px;
-    height: 30px;
-    background-color: rgb(114, 111, 111);
-}
-
-.ring{
-  display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-image: url('../video/ring\ motion.gif');
-    background-size: 90%;
-    background-repeat: no-repeat;
-    background-position: center;
-    height: 100vh;
-    width: 100%;
-}
-
-.ring-text{
-  text-align: center;
-    margin-top: 300px;
-    width: 30%
-}
-.ring-text h1{ 
-  color: #098d65;
-    letter-spacing: 2px
 }
