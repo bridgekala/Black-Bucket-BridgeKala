@@ -5679,6 +5679,7 @@ input[type="color"] {
   transform: translateX(-50%);
   bottom: 6px;
   z-index: 5;
+  text-align: center;
 }
 .tp-hero-2__mouse-scroll span {
   display: block;
