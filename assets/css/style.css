@@ -18909,7 +18909,7 @@ input[type="color"] {
     height: 101%;
     object-fit: cover;
     z-index: -1;
-    background: black;
+    /* background: black; */
   }
   section {
     margin: 0;
