@@ -18803,10 +18803,26 @@ input[type="color"] {
   color: white;
   font-size: 24px;
   border: none;
-  padding: 10px;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
   cursor: pointer;
   z-index: 10;
   border-radius: 50%;
+}
+
+.arrow:hover {
+  color: rgb(125 122 122 / 100%);
+  scale: 1.06;
+  background-color: white;
+  box-shadow: 0 0 8px rgba(128, 128, 128, 0.6);
+}
+
+.arrow:active {
+  scale: 0.9;
 }
 
 .arrow.left {
@@ -18816,7 +18832,12 @@ input[type="color"] {
 .arrow.right {
   right: 10px;
 }
-
+@media (max-width: 550px) {
+  .arrow:hover {
+    color: white;
+    background: rgb(125 122 122 / 31%);
+  }
+}
 .caption {
   font-weight: bold;
   font-size: 18px;
@@ -18842,9 +18863,9 @@ input[type="color"] {
 .MutualfundSubmenu {
   list-style: none;
   padding: 15px;
-  background: #1abc34; 
+  background: #1abc34;
   border-radius: 12px;
-   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); 
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 .MutualfundSubmenu li {
@@ -18855,52 +18876,52 @@ input[type="color"] {
 .MutualfundSubmenu li a {
   display: block;
   padding: 10px 15px;
-  background: #3fd155;   /* lighter green for buttons */
+  background: #3fd155; /* lighter green for buttons */
   color: #fff;
   font-weight: bold;
   text-decoration: none;
-  border-radius: 20px;   /* pill shape */
+  border-radius: 20px; /* pill shape */
   text-align: left;
   transition: all 0.3s ease;
 }
 
 .MutualfundSubmenu li a:hover {
-  background: #34c249;   /* darker green on hover */
+  background: #34c249; /* darker green on hover */
   transform: translateX(5px); /* slight movement */
 }
 
-@media (max-width: 1200px)  {
-.video-section {
- position: relative;
-  width: 100%;
-  min-height: 100vh; 
-  overflow: hidden;
-  margin: 0;
-  padding: 0;
-  line-height: 0; /* prevents inline-gap from video */
-}
+@media (max-width: 1200px) {
+  .video-section {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    line-height: 0; /* prevents inline-gap from video */
+  }
 
-.video-bg {
-position: absolute;
-  top: 0;
-  left: 0;
-  width: 101%;
-  height: 101%;
-  object-fit: cover;
-  z-index: -1;
-  background: black;
-}
-section {
-  margin: 0;
-  padding: 0;
-}
+  .video-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 101%;
+    height: 101%;
+    object-fit: cover;
+    z-index: -1;
+    background: black;
+  }
+  section {
+    margin: 0;
+    padding: 0;
+  }
 
-.video-content {
-  position: relative;
-  z-index: 1;
-  color: white;
-  text-align: center;
-  /* padding-top: 180px; */
-  font-family: sans-serif;
-}
+  .video-content {
+    position: relative;
+    z-index: 1;
+    color: white;
+    text-align: center;
+    /* padding-top: 180px; */
+    font-family: sans-serif;
+  }
 }
