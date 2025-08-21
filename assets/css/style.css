@@ -3399,6 +3399,7 @@ input[type="color"] {
   font-size: 45px;
   line-height: 1.2;
   letter-spacing: 2px;
+  color: black;
 }
 .tp-section-title span {
   color: var(--tp-theme-3);
