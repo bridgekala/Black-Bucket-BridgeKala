@@ -5677,8 +5677,8 @@ input[type="color"] {
 .tp-hero-2__mouse-scroll {
   position: absolute;
   left: 50%;
+  bottom: 15px;
   transform: translateX(-50%);
-  bottom: 6px;
   z-index: 5;
   text-align: center;
 }
@@ -18924,5 +18924,16 @@ input[type="color"] {
     text-align: center;
     /* padding-top: 180px; */
     font-family: sans-serif;
+  }
+}
+
+@media (max-width: 545px) {
+  .slide.active {
+    width: 200px;
+    height: 200px;
+  }
+  .slide {
+    width: 115px;
+    height: 160px;
   }
 }

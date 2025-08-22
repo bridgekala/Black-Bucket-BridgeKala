@@ -1797,12 +1797,12 @@ function prevSlide() {
   updateActive();
 }
 
-function startAutoSlide() {
-  if (autoSlideInterval) clearInterval(autoSlideInterval);
-  autoSlideInterval = setInterval(() => {
-    nextSlide();
-  }, 2500);
-}
+// function startAutoSlide() {
+//   if (autoSlideInterval) clearInterval(autoSlideInterval);
+//   autoSlideInterval = setInterval(() => {
+//     nextSlide();
+//   }, 2500);
+// }
 
 function stopAutoSlide() {
   if (autoSlideInterval) clearInterval(autoSlideInterval);
