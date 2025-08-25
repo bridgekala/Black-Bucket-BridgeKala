@@ -3004,7 +3004,7 @@ input[type="color"] {
 }
 
 .tp-inner-font .accordion-items button {
-  font-family: var(--tp-ff-body);
+  font-family: "italiana";
 }
 .tp-inner-font .accordion-items .accordion-body {
   font-family: var(--tp-ff-body);
@@ -3395,6 +3395,7 @@ input[type="color"] {
 }
 
 .tp-section-title {
+  font-family: "italiana";
   font-weight: 700;
   font-size: 45px;
   line-height: 1.2;
