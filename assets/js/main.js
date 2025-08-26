@@ -1405,35 +1405,38 @@ navLinks.forEach((link) => {
 });
 
 document.addEventListener("DOMContentLoaded", function () {
-  // --- Mutual Fund Advisory submenu toggle on arrow click with arrow rotation ---
-  var mutualArrow = document.querySelector(".mutual-arrow");
-  var mutualFundSubmenu = document.querySelector(".MutualfundSubmenu");
-  if (mutualArrow && mutualFundSubmenu) {
-    // Hide submenu by default
-    mutualFundSubmenu.style.display = "none";
-    mutualArrow.style.transition = "transform 0.2s";
-    mutualArrow.addEventListener("click", function (e) {
-      e.stopPropagation();
-      var isOpen = mutualFundSubmenu.style.display === "block";
-      if (!isOpen) {
-        mutualFundSubmenu.style.display = "block";
-        mutualArrow.style.transform = "rotate(180deg)";
-      } else {
-        mutualFundSubmenu.style.display = "none";
-        mutualArrow.style.transform = "rotate(0deg)";
-      }
-    });
-    // Optional: Hide submenu if click outside
-    document.addEventListener("click", function (e) {
+  // --- Submenu toggle logic for Mutual Fund Advisory and Insurance Planning ---
+  var mutualArrows = document.querySelectorAll(".mutual-arrow");
+  var mutualFundSubmenus = document.querySelectorAll(".MutualfundSubmenu");
+  mutualFundSubmenus.forEach(function (submenu, idx) {
+    submenu.style.display = "none";
+    if (mutualArrows[idx]) {
+      mutualArrows[idx].style.transition = "transform 0.2s";
+      mutualArrows[idx].addEventListener("click", function (e) {
+        e.stopPropagation();
+        var isOpen = submenu.style.display === "block";
+        if (!isOpen) {
+          submenu.style.display = "block";
+          mutualArrows[idx].style.transform = "rotate(180deg)";
+        } else {
+          submenu.style.display = "none";
+          mutualArrows[idx].style.transform = "rotate(0deg)";
+        }
+      });
+    }
+  });
+  // Hide any open submenu if click outside
+  document.addEventListener("click", function (e) {
+    mutualFundSubmenus.forEach(function (submenu, idx) {
       if (
-        !mutualFundSubmenu.contains(e.target) &&
-        !mutualArrow.contains(e.target)
+        !submenu.contains(e.target) &&
+        !mutualArrows[idx].contains(e.target)
       ) {
-        mutualFundSubmenu.style.display = "none";
-        mutualArrow.style.transform = "rotate(0deg)";
+        submenu.style.display = "none";
+        mutualArrows[idx].style.transform = "rotate(0deg)";
       }
     });
-  }
+  });
   // --- base elements ---
   const navIcon = document.getElementById("navIcon");
   const navMenu = document.getElementById("navMenu");
