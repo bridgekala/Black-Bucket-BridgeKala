@@ -501,29 +501,47 @@
                 <div class="col-xl-7 col-lg-6">
                   <div class="contact-form-right-warp">
                     <div class="postbox__comment-form">
-                      <form action="#" class="box">
+                      <form id="contact-form" class="box">
                         <div class="row gx-20">
                           <div class="col-12">
                             <div class="postbox__comment-input mb-30">
-                              <input type="text" class="inputText" required />
+                              <input
+                                type="text"
+                                class="inputText"
+                                name="user_name"
+                                required
+                              />
                               <span class="floating-label">Full Name</span>
                             </div>
                           </div>
+
                           <div class="col-12">
                             <div class="postbox__comment-input mb-30">
-                              <input type="text" class="inputText" required />
+                              <input
+                                type="email"
+                                class="inputText"
+                                name="user_email"
+                                required
+                              />
                               <span class="floating-label">Your Email</span>
                             </div>
                           </div>
+
                           <div class="col-12">
                             <div class="postbox__comment-input mb-35">
-                              <input type="text" class="inputText" required />
+                              <input
+                                type="text"
+                                class="inputText"
+                                name="user_phone"
+                                required
+                              />
                               <span class="floating-label">Phone Number</span>
                             </div>
                           </div>
+
                           <div class="col-12">
                             <div class="postbox__select mb-30">
-                              <select>
+                              <select name="user_inquiry">
                                 <option>Your Inquiry about</option>
                                 <option>Mutual Fund Advisory</option>
                                 <option>Pre-IPO or Equity Deals</option>
@@ -533,18 +551,21 @@
                               </select>
                             </div>
                           </div>
+
                           <div class="col-xxl-12">
                             <div class="postbox__comment-input mb-30">
                               <textarea
                                 class="textareaText"
+                                name="message"
                                 required
                               ></textarea>
                               <span class="floating-label-2">Message...</span>
                             </div>
                           </div>
+
                           <div class="col-xxl-12">
                             <div class="postbox__btn-box">
-                              <button class="submit-btn w-100">
+                              <button type="submit" class="submit-btn w-100">
                                 Book Your Free Consultation
                               </button>
                             </div>
@@ -831,7 +852,30 @@
         </footer>
       </div>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script>
+      (function () {
+        emailjs.init("UKDFPpBU_uS7hg33V"); // Replace with your EmailJS public key
+      })();
+    </script>
+    <script>
+      document
+        .getElementById("contact-form")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
 
+          emailjs.sendForm("service_tf9e1ii", "template_930hbso", this).then(
+            () => {
+              alert("Your message has been sent successfully!");
+              this.reset(); // clear form
+            },
+            (error) => {
+              console.error("FAILED...", error);
+              alert("Failed to send message: " + JSON.stringify(error));
+            }
+          );
+        });
+    </script>
     <script src="assets/js/jquery.js"></script>
     <script src="assets/js/waypoints.js"></script>
     <script src="assets/js/bootstrap.bundle.min.js"></script>
