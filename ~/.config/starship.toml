@@ -1,0 +1,38 @@
+# ~/.config/starship.toml
+
+format = """
+[╭─](bold blue)$username [in](bold green) $directory$git_branch$git_status$nodejs$python
+[╰─❯](bold yellow) """
+
+add_newline = true
+
+[username]
+show_always = true
+style_user = "bold cyan"
+
+[directory]
+style = "bold purple"
+truncation_length = 3
+truncate_to_repo = false
+
+[git_branch]
+symbol = "🌿 "
+style = "bold green"
+
+[git_status]
+style = "bold red"
+
+[nodejs]
+symbol = "🟢 "
+format = " [$symbol($version)]($style)"
+style = "bold green"
+
+[python]
+symbol = "🐍 "
+format = " [$symbol($version)]($style)"
+style = "bold yellow"
+
+[cmd_duration]
+min_time = 500
+format = " took [$duration]($style)"
+style = "italic dimmed cyan"
